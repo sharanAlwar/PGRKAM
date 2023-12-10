@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>user Login</h1>
+    <form method="POST" action="/user-login">
+        <p>Enter Name:</p>
+        <input type="text" name="username" />
+        <p>Enter Password:</p>
+        <input type="password" name="password"/>
+        <input type="submit" value="Login" />
+    </form>
+    <p>New user ? then <a href="{{url_for('user_register')}}">register here</a></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/Login.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://play-lh.googleusercontent.com/l7uw4DJ65-q_G9RBp3e5XPDAuRz5x6jP3hqUSpdUr-ZM2qpyoQdDBT1U6qztnxchhw" alt="">
+        </div>
+        <br>
+        <br>
+        <form class="p-3 mt-3" action="/login" method="POST">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="userName" id="userName" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" placeholder="Password">
+            </div>
+            <br>
+            <input type="submit" class="btn mt-3" value="Login"/>
+        </form>
+        <br>    
+        <center>
+        <div class="text-center fs-6">
+            <a href="#">Forget password?</a> 
+        </div>
+    </center>
+    </div>
+</body>
+</html>

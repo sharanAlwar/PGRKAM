@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+    <form action="/user-register" method="POST">
+        
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="passw" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <label for="location">Location in Punjab:</label>
+        <select id="location" name="location">
+            <option value="punjab">Punjab</option>
+            <option value="amritsar">Amritsar</option>
+            <option value="ludhiana">Ludhiana</option>
+        </select>
+
+        <h3>Educational Information</h3>
+
+        <label for="educationLevel">Education Level:</label>
+        <select id="educationLevel" name="educationLevel">
+            <option value="uneducated">Uneducated</option>
+            <option value="highSchool">High School</option>
+            <option value="diploma">Diploma</option>
+            <option value="bachelors">Bachelor's Degree</option>
+            <option value="masters">Master's Degree</option>
+        </select>
+
+        <label for="university">University:</label>
+        <input type="text" id="university" name="university">
+
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree">
+
+        <label for="major">Major:</label>
+        <input type="text" id="major" name="major">
+
+        <label for="graduationYear">Graduation Year:</label>
+        <input type="number" id="graduationYear" name="graduationYear">
+
+        <h3>Work Experience</h3>
+
+        <label for="yearsOfExperience">Years of Experience:</label>
+        <input type="number" id="yearsOfExperience" name="yearsOfExperience">
+
+        <label for="previousEmployer">Previous Employer:</label>
+        <input type="text" id="previousEmployer" name="previousEmployer">
+
+        <h3>Preferences</h3>
+
+        <label for="preferredJobLocation">Preferred Job Location:</label>
+        <input type="text" id="preferredJobLocation" name="preferredJobLocation">
+
+        <h3>Skills</h3>
+
+        <label for="programmingLanguages">Programming Languages (comma-separated):</label>
+        <input type="text" id="programmingLanguages" name="programmingLanguages">
+
+        <label for="technicalSkills">Technical Skills (comma-separated):</label>
+        <input type="text" id="technicalSkills" name="technicalSkills">
+
+        <label for="softSkills">Soft Skills (comma-separated):</label>
+        <input type="text" id="softSkills" name="softSkills">
+
+        <h3>Brief Bio</h3>
+
+        <label for="bio">Tell us about yourself:</label>
+        <textarea id="bio" name="bio"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
