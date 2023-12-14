@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministries Data</title>
+    <!-- Add jQuery and Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Style the filter input fields and labels */
+        label {
+            font-weight: bold;
+        }
+
+        #postname{
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: orange;
+        }
+        ::placeholder{
+            color: orange;
+        }
+        /* Style the buttons */
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #prev-page-btn, #next-page-btn {
+            background-color: orange;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style the details rows */
+        .details-row {
+            background-color: #f5f5f5;
+        }
+
+        /* Style the pagination controls */
+        .pagination {
+            margin-top: 20px;
+        }
+
+        /* Style the page info text */
+        #page-info {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .details-row {
+        background-color: white;
+    }
+    .short-title{
+        color: black;   
+    }
+    </style>
+</head>
+<body>
+    <label for="postname" style="color: orange;">Filter by Post Name:</label>
+    <input type="text" id="postname" placeholder="Enter Post Name">
+
+    <!-- Add a table structure with the id "data-table" -->
+    <table class="table" id="data-table">
+        <thead>
+            <tr>
+                <th><b>Post Name</b></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="pagination">
+        <button id="prev-page-btn">Previous Page</button>
+        <span id="page-info">Page 1 of 1</span>
+        <button id="next-page-btn">Next Page</button>
+    </div>
+
+    <script>
+        var data = [];
+        var currentPage = 1;
+        var totalPages = 1;
+        var typingTimer;
+        var doneTypingInterval = 500; // 500 milliseconds
+
+        function displayDetails(postName, detailsDiv) {
+    const matchingRows = data.filter(row => row[0].toLowerCase().includes(postName.toLowerCase()));
+
+    if (matchingRows.length > 0) {
+        matchingRows.forEach(details => {
+            detailsDiv.append(`<p><b style="color:blue">Employer Name</b>: ${details[1]}</p>
+                             <p><b style="color:blue">Place of Posting</b>: ${details[2]}</p>
+                             <p><b style="color:blue">Qualification</b>: ${details[3]}</p>
+                             <p><b style="color:blue">Salary</b>: ${details[4]}</p>
+                             <p><b style="color:blue">Vacancies</b>: ${details[5]}</p>
+                             <p><b style="color:blue">Minimum Age</b>: ${details[6]}</p>
+                             <p><b style="color:blue">Experience</b>: ${details[7]}</p>
+                             <p><b style="color:blue">Gender</b>: ${details[8]}</p>
+                             <p><b style="color:blue">Index</b>: ${details[9]}</p>`);
+                            
+                             var data = {
+                                'user_token': 'user_token', 
+                                'event': 'click',
+                                'page_type': 'job_postings', 
+                                'product_id': details[9],  
+                                'timestamp': new Date().toISOString()
+                            };
+
+                            $.ajax({
+                                type: 'POST',
+                                url: '/log_click_event',
+                                contentType: 'application/json;charset=UTF-8',
+                                data: JSON.stringify(data),
+                                success: function (response) {
+                                    console.log('Event logged successfully');
+                                },
+                                error: function (error) {
+                                    console.error('Error logging event', error);
+                                }
+                            }); 
+
+                            });
+        detailsDiv.parent().parent().show();
+    }
+}
+
+        function hideAllDetails() {
+            $('.details-row').hide();
+            $('.details').html('');
+        }
+
+        $('#postname').on('input', function () {
+            hideAllDetails();
+            currentPage = 1;
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(loadData, doneTypingInterval);
+        });
+
+        $('#prev-page-btn').click(function () {
+            if (currentPage > 1) {
+                currentPage--;
+                loadData();
+            }
+        });
+
+        $('#next-page-btn').click(function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                loadData();
+            }
+        });
+
+        $('#data-table tbody').on('click', '.post-name', function () {
+            const postName = $(this).text();
+            const detailsDiv = $(this).closest('tr').next('.details-row').find('.details');
+
+            hideAllDetails();
+            displayDetails(postName, detailsDiv);
+        });
+
+        function loadData() {
+    const postNameFilter = $('#postname').val().toLowerCase();
+    $.get('/data', { post_name: postNameFilter, page: currentPage, rows_per_page: 20 }, function (response) {
+        data = response.data;
+        totalPages = response.total_pages;
+
+        $('#page-info').text(`Page ${currentPage} of ${totalPages}`);
+
+        const tableBody = $('#data-table tbody');
+        tableBody.empty();
+
+        if (data.length > 0) {
+            data.forEach(row => {
+                const postName = row[0];
+                if (postName.toLowerCase().includes(postNameFilter)) {
+                    tableBody.append(`<tr><td class="post-name"><b>${postName}</b></td></tr>
+                                    <tr class="details-row" style="display: none;">
+                                        <td colspan="1">
+                                            <div class="details"></div>
+                                        </td>
+                                    </tr>`);
+                }
+            });
+        } else {
+            tableBody.append('<tr><td colspan="1">No matching results found.</td></tr>');
+        }
+    });
+}
+
+$('#postname').on('input', function () {
+    hideAllDetails();
+    currentPage = 1;
+    loadData();
+});
+
+
+        loadData();
+    </script>
+</body>
+</html>

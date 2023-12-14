@@ -1,0 +1,4 @@
+Flask==3.0.0
+gspread==5.12.2
+protobuf==4.25.1
+pymongo==4.5.0
