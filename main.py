@@ -14,6 +14,7 @@ db = client["Admin_data"]
 collection = db["Users"]
 db1 = client["User_data"]
 collection1 = db1["User"]
+collection2 = db1["Click_events"]
 
 
 credentials = service_account.Credentials.from_service_account_file(
@@ -87,8 +88,9 @@ def log_click_event():
         'product_id': data['product_id'],
         'timestamp': data['timestamp']
     }
-    with open('click_logs.txt', 'a') as f:
-        f.write(str(log_data) + '\n')
+    collection2.insert_one(log_data)
+    # with open('click_logs.txt', 'a') as f:
+    #     f.write(str(log_data) + '\n')
 
     return jsonify({'message': 'Event logged successfully'})
 
