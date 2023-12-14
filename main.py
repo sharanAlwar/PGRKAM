@@ -4,6 +4,7 @@ import datetime
 from google.oauth2 import service_account
 import gspread
 from pymongo import MongoClient
+import secrets
 
 app = Flask("__name__")
 app.secret_key = "Yukesh"
@@ -80,7 +81,7 @@ def log_click_event():
     data['user_id'] = "Yukesh"
     log_data = {
         'date': datetime.datetime.now().strftime('%Y-%m-%d'),
-        'user_token': data['user_token'],
+        'user_token': session["token"],
         'event': data['event'],
         'page_type': data['page_type'],
         'product_id': data['product_id'],
@@ -92,6 +93,9 @@ def log_click_event():
     return jsonify({'message': 'Event logged successfully'})
 
 
+@app.route("/")
+def index():
+    return redirect(url_for('home'))
 
 
 
@@ -121,7 +125,13 @@ def logout():
 @app.route("/user-login",methods=["POST","GET"])
 def user_login():
     if request.method == "POST":
-        return render_template("User-Home.html")
+        username = request.form["username"]
+        password = request.form["password"]
+        user = collection1.find_one({"fullname": username, "password": password})
+        if user:
+            # session["token"] = user["_id"]
+            session["token"] = user["Token"]
+            return render_template("User-Home.html")
     return render_template("User-Login.html")
 
 @app.route("/user-register",methods=["POST","GET"])
@@ -147,8 +157,9 @@ def user_register():
         technicalSkills = request.form["technicalSkills"]
         softSkills = request.form["softSkills"]
         bio = request.form["bio"]
-        collection1.insert_one({"fullname": username , "password": password,"email": email,"phone":phone ,"dateOfBirth":dateOfBirth ,"gender":gender ,"address": address,"location": location,"educationLevel": educationLevel,"university":university ,"degree":degree ,"major":major ,"graduationYear": graduationYear,"yearsOfExperience":yearsOfExperience ,"previousEmployer": previousEmployer,"preferredJobLocation":preferredJobLocation ,"programmingLanguages": programmingLanguages,"technicalSkills":technicalSkills,"softSkills": softSkills, "bio":bio })
-        return "SUbmitted form"
+        user_token = secrets.token_hex(16)
+        collection1.insert_one({"Token":user_token,"fullname": username , "password": password,"email": email,"phone":phone ,"dateOfBirth":dateOfBirth ,"gender":gender ,"address": address,"location": location,"educationLevel": educationLevel,"university":university ,"degree":degree ,"major":major ,"graduationYear": graduationYear,"yearsOfExperience":yearsOfExperience ,"previousEmployer": previousEmployer,"preferredJobLocation":preferredJobLocation ,"programmingLanguages": programmingLanguages,"technicalSkills":technicalSkills,"softSkills": softSkills, "bio":bio })
+        return redirect(url_for("user_login"))
     return render_template("User-Register.html")
 
 if __name__=="__main__":

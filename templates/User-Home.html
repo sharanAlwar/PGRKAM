@@ -59,10 +59,19 @@
         }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LHCGLN2DT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LHCGLN2DT');
+</script>
 <body>
     <header>
-        <h1>Welcome John Doe</h1>
-        <a href="#" class="view-jobs-button">View Jobs</a>
+        <h1>Welcome </h1>
+        <a href="{{url_for('job_post')}}" class="view-jobs-button">View Jobs</a>
     </header>
 </body>
 </html>

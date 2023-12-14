@@ -1,0 +1,14 @@
+{'date': '2023-12-14', 'user_token': 'user_token', 'event': 'click', 'page_type': 'job_postings', 'product_id': '0', 'timestamp': '2023-12-14T16:05:31.664Z'}
+{'date': '2023-12-14', 'user_token': 'user_token', 'event': 'click', 'page_type': 'job_postings', 'product_id': '1', 'timestamp': '2023-12-14T16:05:33.077Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '3', 'timestamp': '2023-12-14T16:13:23.343Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '17', 'timestamp': '2023-12-14T16:13:23.344Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '3', 'timestamp': '2023-12-14T16:13:27.179Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '17', 'timestamp': '2023-12-14T16:13:27.180Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '9', 'timestamp': '2023-12-14T16:13:30.641Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '16', 'timestamp': '2023-12-14T16:13:30.642Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '14', 'timestamp': '2023-12-14T16:13:33.177Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '17', 'timestamp': '2023-12-14T16:13:35.275Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '18', 'timestamp': '2023-12-14T16:13:40.211Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '0', 'timestamp': '2023-12-14T16:14:13.032Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '1', 'timestamp': '2023-12-14T16:14:15.028Z'}
+{'date': '2023-12-14', 'user_token': '2f848a058db51a9cb073887abb152a59', 'event': 'click', 'page_type': 'job_postings', 'product_id': '2', 'timestamp': '2023-12-14T16:14:17.523Z'}
