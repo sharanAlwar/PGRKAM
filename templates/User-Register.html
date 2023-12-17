@@ -3,36 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Job Portal Registration</title>
     <style>
         body {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
+  
 
-        input, select, textarea {
+   
+        /* new css */
+        .header{
+            /* background-color: #f5cf90; */
+            background: hsla(0, 0%, 100%, 1);
+            background: linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            background: -moz-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F6CB87", GradientType=1 );
+            font-family: 'Open Sans', sans-serif;
             width: 100%;
-            padding: 8px;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            justify-content:stretch;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .left{
+            /* flex:1; */
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            padding-bottom: 20px;
+
+        }
+        .right{
+            /* flex: 1; */
+            display: flex;
+            justify-content: end;
+
+        }
+        .right a{
+            text-decoration: none;
+            margin: 0 10px;
+            color: black;
+            font-size: small;
+            font-weight: 600;
+        }
+        .logoimg{
+            margin: 30px 10px;
+        }
+        .headerContent{
+            height: max-content;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .headerContent p,h4{
+            margin: 3px;
+        }
+        .headerContent p{
+            font-size: small;
+            font-weight: 600;
+        }
+        .mainContainer{
+            font-family: 'Open Sans', sans-serif;
+            margin: 30px auto;
+            width: 1110px;
+            height: fit-content;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+        }
+        .instruction{
+            flex: 1;
+            background-color: #f9b154;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: start;
+        }
+        .instruction h3{
+            margin:0;
+            padding-left: 22px;
+        }
+        .ins-points li{
+            font-size: small;
             margin-bottom: 10px;
+        }
+        .formCont{
+            flex:1;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: start;
+            align-items: baseline;
+            flex-direction: column;
+            box-sizing: border-box;
+            /* padding-left: 30px; */
+            padding-top: 20px;
+            padding-left:30px;
+            font-size: medium;
+        }
+        .formCont form{
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .formCont form input,select,textarea{
+            border-color: rgb(212, 212, 212);
+            border-radius: 4px;
+            border-width: 1px;
+            box-shadow: none;
+            width:480px;
+            height: 35px;
+            margin-bottom: 7px;
+            padding: 8px;
             box-sizing: border-box;
         }
 
-        button {
-            background-color: #4CAF50;
+        .formCont form input:hover{
+            border-color: #ff9b19;
+        }
+
+        .formCont label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: small;
+        }
+
+        .formCont button{
+            margin-top: 10px;
+            background-color: #f7900d;
+            width: 150px;
             color: white;
+            font-size: medium;
+            height: 40px;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
-
-        button:hover {
-            background-color: #45a049;
+        .formCont button:hover{
+            background-color: #f7920dc5;
+        }
+        .formCont p{
+            font-size: small;
+            margin: 10px 0;
+        }
+        .formCont h2{
+            margin: 10px 0; 
+            font-weight: 600;
         }
     </style>
 </head>
@@ -46,96 +184,134 @@
   gtag('config', 'G-4LHCGLN2DT');
 </script>
 <body>
-
-    <h2>User Registration</h2>
-    <form action="/user-register" method="POST">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="left">
+            <img src="/static/logo.png" alt="" class="logoimg">
+            <div class="headerContent">
+                <h4 style="font-weight: 800;">PUNJAB GHAR GHAR ROZGAR</h4>
+                <p>Department of Employment Generation,<br>
+                Skill Development & Training- Govt. Of Punjab, India</p>
+            </div>
+        </div>
+        <div class="right">
+            <a href="https://www.pgrkam.com/" class="">HOME</a>
+            <a href="https://www.pgrkam.com/about">ABOUT US</a>
+            <a href="https://www.pgrkam.com/contact-us">CONTACT US</a>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="mainContainer">
+        <!-- LEFT HALF DIV -->
+        <div class="instruction">  
+                <h3>Read the Instructions below, before registration with this portal.</h3>
+                <ul class="ins-points">
+                    <li>All the fields having asterisk(*) sign are compulsory to fill</li>
+                    <li>Please enter correct mobile number, it is necessary for registration verification.</li>
+                    <li>Please have your registered mobile with you, after form submission OTP will be sent on mobile for verification</li>
+                    <li>You can use mobile number only once for registration</li>
+                    <li>Your Username, Password and verification OTP will be sent to your registered mobile number after submit</li>
+                    <li>You will be asked for OTP to verify, use OTP sent on your mobile phone</li>
+                    <li>Only verified user can login to their account with username, and password sent to your mobile</li>
+                </ul>
+        </div>
+        <!-- RIGHT HALF DIV -->
+        <div class="formCont">
+            <h2>Register</h2>
+            <hr>
+            <form action="/user-register" method="POST">
         
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="passw" name="password" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="dateOfBirth">Date of Birth:</label>
-        <input type="date" id="dateOfBirth" name="dateOfBirth">
-
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-
-        <label for="address">Address:</label>
-        <textarea id="address" name="address"></textarea>
-
-        <label for="location">Location in Punjab:</label>
-        <select id="location" name="location">
-            <option value="punjab">Punjab</option>
-            <option value="amritsar">Amritsar</option>
-            <option value="ludhiana">Ludhiana</option>
-        </select>
-
-        <h3>Educational Information</h3>
-
-        <label for="educationLevel">Education Level:</label>
-        <select id="educationLevel" name="educationLevel">
-            <option value="uneducated">Uneducated</option>
-            <option value="highSchool">High School</option>
-            <option value="diploma">Diploma</option>
-            <option value="bachelors">Bachelor's Degree</option>
-            <option value="masters">Master's Degree</option>
-        </select>
-
-        <label for="university">University:</label>
-        <input type="text" id="university" name="university">
-
-        <label for="degree">Degree:</label>
-        <input type="text" id="degree" name="degree">
-
-        <label for="major">Major:</label>
-        <input type="text" id="major" name="major">
-
-        <label for="graduationYear">Graduation Year:</label>
-        <input type="number" id="graduationYear" name="graduationYear">
-
-        <h3>Work Experience</h3>
-
-        <label for="yearsOfExperience">Years of Experience:</label>
-        <input type="number" id="yearsOfExperience" name="yearsOfExperience">
-
-        <label for="previousEmployer">Previous Employer:</label>
-        <input type="text" id="previousEmployer" name="previousEmployer">
-
-        <h3>Preferences</h3>
-
-        <label for="preferredJobLocation">Preferred Job Location:</label>
-        <input type="text" id="preferredJobLocation" name="preferredJobLocation">
-
-        <h3>Skills</h3>
-
-        <label for="programmingLanguages">Programming Languages (comma-separated):</label>
-        <input type="text" id="programmingLanguages" name="programmingLanguages">
-
-        <label for="technicalSkills">Technical Skills (comma-separated):</label>
-        <input type="text" id="technicalSkills" name="technicalSkills">
-
-        <label for="softSkills">Soft Skills (comma-separated):</label>
-        <input type="text" id="softSkills" name="softSkills">
-
-        <h3>Brief Bio</h3>
-
-        <label for="bio">Tell us about yourself:</label>
-        <textarea id="bio" name="bio"></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+        
+                <label for="password">Password:</label>
+                <input type="password" id="passw" name="password" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+        
+                <label for="dateOfBirth">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth">
+        
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+        
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+        
+                <label for="location">Location in Punjab:</label>
+                <select id="location" name="location">
+                    <option value="punjab">Punjab</option>
+                    <option value="amritsar">Amritsar</option>
+                    <option value="ludhiana">Ludhiana</option>
+                </select>
+        
+                <h3>Educational Information</h3>
+        
+                <label for="educationLevel">Education Level:</label>
+                <select id="educationLevel" name="educationLevel">
+                    <option value="uneducated">Uneducated</option>
+                    <option value="highSchool">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelors">Bachelor's Degree</option>
+                    <option value="masters">Master's Degree</option>
+                </select>
+        
+                <label for="university">University:</label>
+                <input type="text" id="university" name="university">
+        
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree">
+        
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major">
+        
+                <label for="graduationYear">Graduation Year:</label>
+                <input type="number" id="graduationYear" name="graduationYear">
+        
+                <h3>Work Experience</h3>
+        
+                <label for="yearsOfExperience">Years of Experience:</label>
+                <input type="number" id="yearsOfExperience" name="yearsOfExperience">
+        
+                <label for="previousEmployer">Previous Employer:</label>
+                <input type="text" id="previousEmployer" name="previousEmployer">
+        
+                <h3>Preferences</h3>
+        
+                <label for="preferredJobLocation">Preferred Job Location:</label>
+                <input type="text" id="preferredJobLocation" name="preferredJobLocation">
+        
+                <h3>Skills</h3>
+        
+                <label for="programmingLanguages">Programming Languages (comma-separated):</label>
+                <input type="text" id="programmingLanguages" name="programmingLanguages">
+        
+                <label for="technicalSkills">Technical Skills (comma-separated):</label>
+                <input type="text" id="technicalSkills" name="technicalSkills">
+        
+                <label for="softSkills">Soft Skills (comma-separated):</label>
+                <input type="text" id="softSkills" name="softSkills">
+        
+                <h3>Brief Bio</h3>
+        
+                <label for="bio">Tell us about yourself:</label>
+                <textarea id="bio" name="bio"></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    
 
 </body>
 </html>

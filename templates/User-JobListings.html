@@ -1,9 +1,10 @@
+<!-- templates/job_listings.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministries Data</title>
+    <title>Job Listings</title>
     <!-- icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- google fonts -->
@@ -271,192 +272,24 @@
                 <tr><td><a>Discussion Forum</a></td></tr>
             </table>
         </div>
-        <div class="right-content">   
-            <div class="Title">
-                Dashboard 
-            </div> 
-            <div class="JobList">
+        <div class="right-content">
+            <h1>Job Listings</h1>
 
-                <label for="postname" style="color: orange;font-weight: 600;">Filter by Post Name:</label>
-                <input type="text" id="postname" placeholder="Enter Post Name">
-                
-                <!-- Add a table structure with the id "data-table" -->
-                <table class="table" id="data-table">
-                <thead>
-                    <tr>
-                        <th><b>Post Name</b></th>
-                        <!-- <th><b><button>Apply</button></b></th> -->
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                </table>
-                <div class="pagination">
-                    <button id="prev-page-btn">Previous Page</button>
-                    <span id="page-info">Page 1 of 1</span>
-                    <button id="next-page-btn">Next Page</button>
+            {% for job in job_listings_data %}
+                <div>
+                    <h2>{{ job.title }}</h2>
+                    <p>{{ job.description }}</p>
+                    <form method="post" action="{{ url_for('submit_resume', job_title=job['title']) }}" enctype="multipart/form-data">
+                        <input type="file" name="file" accept=".pdf" required>
+                        <button type="submit">Submit Resume</button>
+                    </form>
                 </div>
-            </div>
+            {% endfor %}
+
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
         </div>
     </div>
-    <script>
-        var data = [];
-        var currentPage = 1;
-        var totalPages = 1;
-        var typingTimer;
-        var doneTypingInterval = 500; // 500 milliseconds
-
-        function displayDetails(postName, detailsDiv) {
-    const matchingRows = data.filter(row => row[0].toLowerCase().includes(postName.toLowerCase()));
-    
-    if (matchingRows.length > 0) {
-        matchingRows.forEach(details => {
-            detailsDiv.append(`
-                <p><b>Employer Name</b>: ${details[1]}</p>
-                <p><b>Place of Posting</b>: ${details[2]}</p>
-                <p><b>Qualification</b>: ${details[3]}</p>
-                <div class="subdetails">
-                    <p>Salary: ${details[4]}</p>
-                    <p>Vacancies: ${details[5]}</p>
-                    <p>Minimum Age: ${details[6]}</p>
-                    <p>Experience: ${details[7]}</p>
-                    <p>Gender: ${details[8]}</p>
-                    <p>Index: ${details[9]}</p>
-                <div>
-            `);
-            var data = {
-                                'user_token': 'user_token', 
-                                'event': 'click',
-                                'page_type': 'job_postings', 
-                                'product_id': details[9],  
-                                'timestamp': new Date().toISOString()
-                            };
-
-                            $.ajax({
-                                type: 'POST',
-                                url: '/log_click_event',
-                                contentType: 'application/json;charset=UTF-8',
-                                data: JSON.stringify(data),
-                                success: function (response) {
-                                    console.log('Event logged successfully');
-                                },
-                                error: function (error) {
-                                    console.error('Error logging event', error);
-                                }
-                            }); 
-
-        });
-
-        const applyButton = document.createElement('button');
-        applyButton.className = 'apply-btn';
-        applyButton.innerHTML = 'Apply';
-        applyButton.onclick = function() {
-            console.log("hello")
-            matchingRows.forEach(details => {
-            var data = {
-                                'user_token': 'user_token', 
-                                'event': 'apply',
-                                'page_type': 'job_postings', 
-                                'product_id': details[9],  
-                                'timestamp': new Date().toISOString()
-                            };
-
-                            $.ajax({
-                                type: 'POST',
-                                url: '/log_click_event',
-                                contentType: 'application/json;charset=UTF-8',
-                                data: JSON.stringify(data),
-                                success: function (response) {
-                                    console.log('Event logged successfully');
-                                },
-                                error: function (error) {
-                                    console.error('Error logging event', error);
-                                }
-                            });  
-
-                        });
- 
-        };
-
-        detailsDiv.append(applyButton);
-
-        detailsDiv.parent().parent().show();
-    }
-}
-
-// Rest of your existing code...
-
-
-        function hideAllDetails() {
-            $('.details-row').hide();
-            $('.details').html('');
-        }
-
-        $('#postname').on('input', function () {
-            hideAllDetails();
-            currentPage = 1;
-            clearTimeout(typingTimer);
-            typingTimer = setTimeout(loadData, doneTypingInterval);
-        });
-
-        $('#prev-page-btn').click(function () {
-            if (currentPage > 1) {
-                currentPage--;
-                loadData();
-            }
-        });
-
-        $('#next-page-btn').click(function () {
-            if (currentPage < totalPages) {
-                currentPage++;
-                loadData();
-            }
-        });
-
-        $('#data-table tbody').on('click', '.post-name', function () {
-            const postName = $(this).text();
-            const detailsDiv = $(this).closest('tr').next('.details-row').find('.details');
-
-            hideAllDetails();
-            displayDetails(postName, detailsDiv);
-        });
-
-        function loadData() {
-    const postNameFilter = $('#postname').val().toLowerCase();
-    $.get('/data', { post_name: postNameFilter, page: currentPage, rows_per_page: 20 }, function (response) {
-        data = response.data;
-        totalPages = response.total_pages;
-
-        $('#page-info').text(`Page ${currentPage} of ${totalPages}`);
-
-        const tableBody = $('#data-table tbody');
-        tableBody.empty();
-
-        if (data.length > 0) {
-            data.forEach(row => {
-                const postName = row[0];
-                if (postName.toLowerCase().includes(postNameFilter)) {
-                    tableBody.append(`<tr><td class="post-name"><b>${postName}</b></td></tr>
-                                    <tr class="details-row" style="display: none;">
-                                        <td colspan="1">
-                                            <div class="details"></div>
-                                        </td>
-                                    </tr>`);
-                }
-            });
-        } else {
-            tableBody.append('<tr><td colspan="1">No matching results found.</td></tr>');
-        }
-    });
-}
-
-$('#postname').on('input', function () {
-    hideAllDetails();
-    currentPage = 1;
-    loadData();
-});
-
-
-        loadData();
-    </script>
 </body>
 </html>

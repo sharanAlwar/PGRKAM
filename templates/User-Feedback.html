@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/css/styles.css"/>
+    <script src="static/script.js"></script>
+    <title>Ministries Data</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Add jQuery and Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Add your CSS styles here */
+        .html, .body{
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        /* HEADER CSS */
+        .header{
+            background: hsla(0, 0%, 100%, 1);
+            background: linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            background: -moz-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F6CB87", GradientType=1 );
+            font-family: 'Open Sans', sans-serif;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            justify-content:stretch;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .left{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:center;
+            padding-bottom: 20px;
+
+        }
+        .right{
+            display: flex;
+            justify-content: end;
+        }
+        .right a{
+            text-decoration: none;
+            margin: 0 10px;
+            color: black;
+            font-size: small;
+            font-weight: 600;
+        }
+        .logoimg{
+            margin: 30px 10px;
+        }
+        .headerContent{
+            height: max-content;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .headerContent p,h4{
+            margin: 3px;
+        }
+        .headerContent h4{
+            font-size: large;
+        }
+        .headerContent p{
+            font-size: small;
+            font-weight: 600;
+        }
+
+
+        /* ----------------- */
+        /* PAGE DIVIDING CSS */
+        .main-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 10px 30px;
+            
+        }
+        .left-content{
+            flex:2;
+            max-height: 600px;
+            min-width: 300px;
+            border-color:#ccc;
+            border-width: 1px;
+            border-style: solid;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .right-content{
+            flex: 4;
+            border-color:#ccc;
+            border-width: 1px;
+            border-style: solid;
+            margin: 20px;
+        }
+        /* LEFT CONTENT CSS */
+        .left-content table{
+            flex-grow: 1;
+        }
+        .left-content tr{
+
+            font-weight: 700;
+        }
+        .left-content h4{
+            color: orange;
+
+        }
+        label {
+            font-weight: bold;
+        }
+        .centerr{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .centerr img{
+            max-width: 100px;
+            margin-bottom: 5px;
+        }
+        /* RIGHT CONTENT CSS */
+        .right-content .Title{
+            color: white;
+            background-color: orange;
+            font-size: large;
+            font-weight: 700;
+            margin: 0;
+            padding: 10px;
+        }
+        .right-content .JobList{
+            margin: 15px;
+        }
+
+        .right-content .sdetails{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .right-content .subdetails{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .subdetails p{
+            font-weight: 400;
+        }
+        #postname{
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: orange;
+        }
+        ::placeholder{
+            color: orange;
+        }
+        /* Style the buttons */
+        button {
+            padding: 10px 20px;
+            background-color: #f7900d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #f7920dbd;
+        }
+
+        #prev-page-btn, #next-page-btn {
+            background-color: orange;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style the details rows */
+        .details-row {
+            background-color: #f5f5f5;
+        }
+
+        /* Style the pagination controls */
+        .pagination {
+            margin-top: 20px;
+        }
+
+        /* Style the page info text */
+        #page-info {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .details-row {
+        background-color: white;
+    }
+    .short-title{
+        color: black;   
+    }
+        .selected {
+            border: 2px solid blue; /* Highlight the selected emoji */
+        }
+
+        .rating {
+            cursor: pointer;
+        }
+
+        .selected small {
+            color: blue; /* Highlight the text color for the selected emoji */
+        }
+    </style>
+  </head>
+  <body>
+   <!-- HEADER -->
+   <div class="header">
+    <div class="left">
+        <img src="/static/logo.png" alt="" class="logoimg">
+        <div class="headerContent">
+            <h4 style="font-weight: 800;">PUNJAB GHAR GHAR ROZGAR</h4>
+            <p>Department of Employment Generation,<br>
+            Skill Development & Training- Govt. Of Punjab, India</p>
+        </div>
+    </div>
+    <div class="right">
+        <a href="https://www.pgrkam.com/" class="">HOME</a>
+        <a href="https://www.pgrkam.com/about">ABOUT US</a>
+        <a href="https://www.pgrkam.com/contact-us">CONTACT US</a>
+    </div>
+</div>
+<!-- CONTENT -->
+<div class="main-container">
+    <div class="left-content">
+        <table>
+            <tr><td>
+                <div class="centerr"> 
+                        <img src="/static/user.png" alt="">
+                    <h4 style="font-weight: 700;">Hi, Arun</h4>
+                    <h4>Welcome to your Dashboard!</h4>
+                </div>
+            </td></tr>
+            <tr><td><a>Profile Details</a></td></tr>
+            <tr><td><a>Hall Ticket</a></td></tr>
+            <tr><td><a>My Job Interest</a></td></tr>
+            <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
+            <tr><td><a>Search Councellor</a></td></tr>
+            <tr><td><a>Apply Skill Development Courses</a></td></tr>
+            <tr><td><a href="{{url_for('feedback')}}">Feedback</a></td></tr>
+            <tr><td><a>Self Employment</a></td></tr>
+            <tr><td><a>Discussion Forum</a></td></tr>
+        </table>
+    </div>
+    <div class="right-content">   
+        
+    <div id="panel" class="panel-container">
+        <strong>How satisfied are you with our <br /> PGRKAM website?</strong>
+        <div class="ratings-container">
+            <div class="rating" onclick="selectEmoji('sad')" data-emoji="sad">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg"
+                    alt="">
+                <small>Unhappy</small>
+            </div>
+
+            <div class="rating" onclick="selectEmoji('neutral')" data-emoji="neutral">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiley-icon.svg"
+                    alt="" />
+                <small>Neutral</small>
+            </div>
+
+            <div class="rating" onclick="selectEmoji('satisfied')" data-emoji="satisfied">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/laugh-icon.svg"
+                    alt="" />
+                <small>Satisfied</small>
+            </div>
+        </div>
+        <form id="feedbackForm" action="/submit" method="post">
+            <input type="hidden" id="selectedEmoji" name="emoji" value="">
+            <textarea rows="4" cols="50" name="comment" class="custom-textarea"
+                placeholder="Enter feedback here..."></textarea>
+            <br>
+            <button type="button" class="btn" id="send" onclick="submitForm()">Send Review</button>
+        </form>
+    </div>
+    </div>
+</div> 
+    
+
+
+    <script>
+        function selectEmoji(emoji) {
+            // Remove the "selected" class from all ratings
+            var ratings = document.querySelectorAll('.rating');
+            ratings.forEach(function (rating) {
+                rating.classList.remove('selected');
+                rating.querySelector('small').style.color = ''; // Reset text color
+            });
+
+            // Add the "selected" class to the clicked rating
+            var selectedRating = document.querySelector('.rating[data-emoji="' + emoji + '"]');
+            selectedRating.classList.add('selected');
+            selectedRating.querySelector('small').style.color = 'blue'; // Highlight text color
+
+            // Set the selected emoji value in the hidden input field
+            document.getElementById('selectedEmoji').value = emoji;
+        }
+
+        function submitForm() {
+            // Submit the form
+            document.getElementById('feedbackForm').submit();
+        }
+    </script>
+</body>
+
+</html>
