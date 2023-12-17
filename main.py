@@ -131,6 +131,14 @@ def login():
 def dashboard():
     return render_template("Home.html")
 
+@app.route("/user-alerts")
+def user_alerts():
+    return render_template("Alerts.html")
+
+@app.route("/custom-data")
+def custom_data():
+    return render_template("Custom.html")
+
 @app.route("/logout")
 def logout():
     return redirect(url_for('login'))

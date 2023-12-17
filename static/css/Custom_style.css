@@ -1,0 +1,166 @@
+.drop-container1 {
+    position:relative;
+    display: flex;
+    max-width: 500px;
+    margin-left:480px;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+  }
+  
+  .drop-container1:hover {
+    background: #eee;
+    border-color: #111;
+  }
+  
+  .drop-container1:hover .drop-title {
+    color: #222;
+  }
+  
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+
+  input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #ffcc80;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: #ff8f00;
+  }
+
+  .center {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .center1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .custom-select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(255, 140, 0, 0.5); /* Orange-colored shadow */
+  }
+  
+  .custom-select:hover,
+  .custom-select:focus {
+    border-color: #666;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+
+  .center2{
+    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 30px;
+    height: 15px;
+    background-color:grey;
+    border-radius: 15px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:white;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    left: 15px;
+    background-color:orange;
+  }
+  
+  .custom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc80; /* Blue color for buttons */
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .custom-button:hover {
+    background-color: #ff8f00; /* Darker blue on hover */
+  }
+
+  .center3{
+    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  }
