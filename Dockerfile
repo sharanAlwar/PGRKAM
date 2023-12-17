@@ -8,6 +8,8 @@ RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
+RUN pip install PyMuPDF
+
 EXPOSE 8080
 
 CMD [ "python3", "main.py"]
