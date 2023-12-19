@@ -12,6 +12,8 @@ import numpy as np
 from numpy.linalg import norm
 import fitz
 from oauth2client.service_account import ServiceAccountCredentials
+from email.message import EmailMessage
+import smtplib
 
 app = Flask("__name__")
 app.secret_key = "Yukesh"
@@ -77,7 +79,7 @@ def get_filtered_and_paginated_data(selected_post_name, page, rows_per_page):
 
 @app.route("/job-post")
 def job_post():
-    return render_template("User-Jobs.html")
+    return render_template("User-Jobs.html",uname = session["fname"])
 
 @app.route('/data', methods=['GET'])
 def get_data():
@@ -162,7 +164,7 @@ def user_login():
                 'timestamp': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
              }
             collection2.insert_one(log_data)
-            return render_template("User-Home.html")
+            return redirect(url_for('job_post'))
     return render_template("User-Login.html")
 
 @app.route("/user-register",methods=["POST","GET"])
@@ -196,7 +198,8 @@ def user_register():
 
 @app.route('/feedback')
 def feedback():
-    return render_template('User-Feedback.html')
+    # fname = session["name"]
+    return render_template('User-Feedback.html',uname = session["fname"])
 
 
 @app.route('/submit', methods=['POST'])
@@ -301,7 +304,7 @@ def update_results_google_sheets(job_title, filename, similarity_score):
 
 @app.route('/job_listings', methods=['GET'])
 def job_listings():
-    return render_template('User-JobListings.html', job_listings_data=job_listings_data, error=None)
+    return render_template('User-JobListings.html', job_listings_data=job_listings_data, error=None , uname = session["fname"])
 
 @app.route('/submit_resume/<job_title>', methods=['POST'])
 def submit_resume(job_title):
@@ -332,6 +335,39 @@ def submit_resume(job_title):
         update_results_google_sheets(job_title, filename, similarity_score)
 
     return redirect(url_for('job_listings'))
+
+
+@app.route("/todo")
+def todo():
+    return render_template("Todo.html")
+
+
+@app.route('/sendemail', methods=['POST'])
+def send_email():
+    try:
+        data = request.json
+
+        sender_email = 'optimizeprime007@gmail.com'
+        sender_password = 'qtohvqsovpjpptzk'
+        receiver_email = data['assignee_email']
+        task_description = data['task_description']
+        print(receiver_email)
+        em = EmailMessage()
+        em['From'] = sender_email
+        em['To'] = receiver_email
+        em['Subject'] = 'Task Assignment'
+        em.set_content(f"You have been assigned a new task: {task_description}")
+
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(sender_email, sender_password)
+        server.sendmail(sender_email, receiver_email, em.as_string())
+        server.quit()
+
+        return jsonify({'status': 'success', 'message': 'Email sent successfully'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)})
+
+
 
 
 

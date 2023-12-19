@@ -20,6 +20,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
+        /* THIS PAGE CSS-FEEDBACK */
+        .feedbackbtn{
+            background-color: orange;
+            border-radius: 10px;
+            color: white;
+        }
+        .feedbackbtn:hover{
+            background-color: rgba(255, 166, 0, 0.712);
+            border-radius: 10px;
+            color: white;
+        }
         /* Add your CSS styles here */
         .html, .body{
             margin: 0px;
@@ -271,13 +282,13 @@
             <tr><td>
                 <div class="centerr"> 
                         <img src="/static/user.png" alt="">
-                    <h4 style="font-weight: 700;">Hi, Arun</h4>
+                    <h4 style="font-weight: 700;">Hi {{uname}}</h4>
                     <h4>Welcome to your Dashboard!</h4>
                 </div>
             </td></tr>
             <tr><td><a>Profile Details</a></td></tr>
             <tr><td><a>Hall Ticket</a></td></tr>
-            <tr><td><a>My Job Interest</a></td></tr>
+            <tr><td><a href="{{url_for('job_post')}}">Jobs</a></td></tr>
             <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
             <tr><td><a>Search Councellor</a></td></tr>
             <tr><td><a>Apply Skill Development Courses</a></td></tr>
@@ -289,8 +300,8 @@
     <div class="right-content">   
         
     <div id="panel" class="panel-container">
-        <strong>How satisfied are you with our <br /> PGRKAM website?</strong>
-        <div class="ratings-container">
+        <strong style="color: black;">How satisfied are you with our <br /> PGRKAM website?</strong>
+        <div class="ratings-container" >
             <div class="rating" onclick="selectEmoji('sad')" data-emoji="sad">
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg"
                     alt="">
@@ -309,12 +320,12 @@
                 <small>Satisfied</small>
             </div>
         </div>
-        <form id="feedbackForm" action="/submit" method="post">
+        <form id="feedbackForm" action="/submit" method="post" >
             <input type="hidden" id="selectedEmoji" name="emoji" value="">
             <textarea rows="4" cols="50" name="comment" class="custom-textarea"
-                placeholder="Enter feedback here..."></textarea>
+                placeholder="Enter feedback here..." style="background-color: #ffffff;color: black;"></textarea>
             <br>
-            <button type="button" class="btn" id="send" onclick="submitForm()">Send Review</button>
+            <button type="button" class="btn feedbackbtn" id="send" onclick="submitForm()">Send Review</button>
         </form>
     </div>
     </div>

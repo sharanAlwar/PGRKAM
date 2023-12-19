@@ -1,0 +1,134 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Dashboard </title>
+      <link rel="stylesheet" href="/static/css/Home.css" />
+      <link rel="stylesheet" href="/static/css/todo.css" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+     
+    <!--- Tailwind CSS & Daisy UI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    </style>
+    </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LHCGLN2DT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LHCGLN2DT');
+</script>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="https://play-lh.googleusercontent.com/l7uw4DJ65-q_G9RBp3e5XPDAuRz5x6jP3hqUSpdUr-ZM2qpyoQdDBT1U6qztnxchhw" alt="">
+              <span class="nav-item">DashBoard</span>
+            </a></li>
+            <li><a href="#">
+              <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+              <span class="nav-item">Analytics</span>
+            </a></li>
+            <li><a href="{{url_for('custom_data')}}">
+              <span class="nav-item">Custom Datagraph</span>
+            </a></li>
+
+            <li><a href="">
+              <span class="nav-item">Notifications</span>
+            </a></li>
+            <li><a href="">
+              <span class="nav-item">User Feedbacks</span>
+            </a></li>
+            <li><a href="{{url_for('user_alerts')}}">
+              <span class="nav-item">Recruiter recommendation</span>
+            </a></li>
+            <li><a href="{{url_for('todo')}}">
+              <span class="nav-item">To do</span>
+            </a></li>
+            <li><a href="">
+              <span class="nav-item">System Update</span>
+            </a></li>
+            <li><a href="">
+              <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="">
+              <span class="nav-item">Help</span>
+            </a></li>
+            <li><a href="{{url_for('logout')}}" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+          </ul>
+        </nav>
+    
+        <section class="main">
+            
+          <div class="Todocontainer">
+              <header>
+                  <h1>Todo List</h1>
+                  <!-- Error message -->
+                  <div class="alert-message"></div>
+                  <div class="input-section">
+                      <input type="text" placeholder="Add a todo . . ." class="input input-bordered input-secondary w-full max-w-xs" />
+                      <input type="date" class="input input-bordered input-secondary w-full max-w-xs schedule-date" />
+                      <!-- Assignee Dropdown -->
+                      <select class="select select-bordered select-secondary w-full max-w-xs assignee-dropdown">
+                          <option value="" data-email="">Select Assignee</option>
+                          <!-- Add assignee options dynamically using JavaScript -->
+                      </select>
+                      <button class="btn btn-secondary add-task-button" style="margin-left: 10px;">
+                          <i class="bx bx-plus bx-sm"></i>
+                      </button>
+                  </div>
+              </header>
+
+              <div class="todos-filter">
+                  <div class="dropdown">
+                      <label tabindex="0" class="btn m-1" style="background-color: orange;color: white;
+                      border-style: none;">Filter</label>
+                      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                          <li style='background-color: white;'onclick="filterTodos('all')"><a>All</a></li>
+                          <li style='background-color: white;'onclick="filterTodos('pending')"><a>Pending</a></li>
+                          <li style='background-color: white;'onclick="filterTodos('completed')"><a>Completed</a></li>
+                      </ul>
+                  </div>
+                  <button class="btn btn-secondary delete-all-btn" style="background-color: orange;border: none;">
+                      Delete All
+                  </button>
+              </div>
+
+              <table class="table w-full" style="background-color: white;border-color: #ccc;">
+                  <thead style="background-color: white;">
+                      <tr style="background-color: white;">
+                          <th>Task</th>
+                          <th>Due Date</th>
+                          <th>Assignee</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                      </tr>
+                  </thead>
+                  <tbody class="todos-list-body" style="background-color: white;">
+                  </tbody>
+              </table>
+          </div>
+          
+          <script src="static/main.js"></script>
+        </section>
+      </div>
+    </body>
+    </html></span>
