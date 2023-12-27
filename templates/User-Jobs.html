@@ -85,9 +85,6 @@
             font-weight: 600;
         }
 
-
-        /* ----------------- */
-        /* PAGE DIVIDING CSS */
         .main-container{
             display: flex;
             flex-direction: row;
@@ -231,6 +228,16 @@
         color: black;   
     }
     </style>
+    <div id="google_translate_element"></div>
+  
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      }
+    </script>
+  
+    <!-- Load the Google Translate API -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -264,8 +271,8 @@
                 <tr><td><a>Hall Ticket</a></td></tr>
                 <tr><td><a href="{{url_for('job_post')}}">Jobs</a></td></tr>
                 <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
-                <tr><td><a>Search Councellor</a></td></tr>
-                <tr><td><a>Apply Skill Development Courses</a></td></tr>
+                <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestion</a></td></tr>
+                <tr><td><a href="{{url_for('career_path')}}">Career Path</a></td></tr>
                 <tr><td><a href="{{url_for('feedback')}}">Feedback</a></td></tr>
                 <tr><td><a>Self Employment</a></td></tr>
                 <tr><td><a>Discussion Forum</a></td></tr>
@@ -458,5 +465,15 @@ $('#postname').on('input', function () {
 
         loadData();
     </script>
+    <script>
+        // Function to apply translation to the entire page
+        function translatePage(languageCode) {
+          var translateInstance = new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+          translateInstance.getPageLanguage = function () { return languageCode; };
+        }
+    
+        // Example: Translate the page to French when the page loads
+        translatePage('fr');
+      </script>
 </body>
 </html>

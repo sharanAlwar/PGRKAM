@@ -1,0 +1,198 @@
+Name,Username,State,Qualification,Skills,Experience,Current Job Title,Current Company,Industry,Certifications,Desired Job Title,Desired Industry
+Amit Kumar,amit_kumar001,Haryana,Bachelors,Software Development,4,Software Engineer,TechSolutions,IT,,Senior Software Engineer,IT
+Priya Sharma,priya_sharma002,Maharashtra,Masters,Data Analysis,3,Data Analyst,DataPro,Data Management,,Senior Data Analyst,Data Analysis
+Rahul Singh,rahul_singh003,Telangana,Bachelors,Marketing,5,Marketing Specialist,MarketingHub,Marketing,Digital Marketing Certification,Marketing Manager,Marketing
+Neha Patel,neha_patel004,Gujarat,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Rajesh Verma,rajesh_verma005,Uttar Pradesh,PhD,Machine Learning,6,Machine Learning Engineer,AIInnovate,IT,ML Certification,Senior ML Engineer,IT
+Sneha Kapoor,sneha_kapoor006,Delhi,Masters,Project Management,8,Project Manager,XYZ Ltd,Management,Project Management Certification,Senior Project Manager,Management
+Arjun Sharma,arjun_sharma007,Karnataka,Bachelors,Web Development,4,Web Developer,WebTech,IT,,Senior Web Developer,IT
+Meera Jain,meera_jain008,Maharashtra,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Vikram Singh,vikram_singh009,Haryana,Masters,Data Science,7,Data Scientist,DataGenius,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Pooja Gupta,pooja_gupta010,Uttar Pradesh,Bachelors,Graphic Design,3,Graphic Designer,DesignGenius,Design,,Senior Graphic Designer,Design
+Deepak Yadav,deepak_yadav011,Bihar,Uneducated,Tailoring,10,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Anita Mishra,anita_mishra012,Uttar Pradesh,Bachelors,Teaching,8,School Teacher,LocalSchool,Education,Teaching Certification,Senior School Teacher,Education
+Rajendra Kumar,rajendra_kumar013,Rajasthan,PhD,Environmental Science,12,Environmental Scientist,GreenEarth,Environmental Science,Environmental Science Certification,Senior Environmental Scientist,Environment
+Suman Singh,suman_singh014,Uttar Pradesh,Uneducated,Event Planning,5,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+Anil Yadav,anil_yadav015,Madhya Pradesh,Bachelors,Farming,15,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Rani Verma,rani_verma016,Delhi,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Kavita Sharma,kavita_sharma017,Punjab,Bachelors,Cooking,12,Chef,LocalRestaurant,Culinary,,Head Chef,Hospitality
+Sanjay Kumar,sanjay_kumar018,Maharashtra,Uneducated,Social Work,10,Social Worker,LocalNGO,Social Services,Social Work Certification,Senior Social Worker,Social Services
+Sonali Gupta,sonali_gupta019,Uttar Pradesh,Masters,Interior Design,6,Interior Designer,LocalDesign,Design,Interior Design Certification,Senior Interior Designer,Design
+Rajeev Singh,rajeev_singh020,Karnataka,Bachelors,Construction,8,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Manish Verma,manish_verma021,West Bengal,Uneducated,Painting,14,Painter,LocalArtists,Art,,Master Painter,Local Business
+Asha Devi,asha_devi022,Himachal Pradesh,Masters,Psychiatry,9,Psychiatrist,LocalClinic,Healthcare,Psychiatry Certification,Senior Psychiatrist,Healthcare
+Gaurav Kapoor,gaurav_kapoor023,Haryana,Bachelors,Plumbing,11,Plumber,LocalServices,Construction,,Master Plumber,Local Business
+Nisha Sharma,nisha_sharma024,Tamil Nadu,High School Diploma,Communication Skills,3,Call Center Representative,LocalCallCenter,Customer Service,,Senior Call Center Representative,Customer Service
+Ajay Yadav,ajay_yadav025,Uttar Pradesh,Bachelors,Electrical Work,7,Electrician,LocalServices,Construction,,Master Electrician,Local Business
+Sangeeta Verma,sangeeta_verma026,Maharashtra,Uneducated,Catering,13,Caterer,LocalCaterers,Hospitality,,Master Caterer,Local Business
+Rajat Singh,rajat_singh027,Karnataka,Masters,Public Relations,8,Public Relations Specialist,LocalPRAgency,Communication,PR Certification,Senior PR Specialist,Communication
+Meenakshi Kumari,meenakshi_kumari028,Rajasthan,Bachelors,Tailoring,5,Tailor,LocalTailors,Artisan,,Master Tailor,Local Business
+Kiran Devi,kiran_devi029,Bihar,Uneducated,Cooking,9,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Ravi Yadav,ravi_yadav030,Haryana,Masters,Environmental Science,6,Environmental Consultant,LocalConsultancy,Environment,Environmental Certification,Senior Environmental Consultant,Environment
+Shalini Singh,shalini_singh031,Punjab,Bachelors,Marketing,4,Marketing Coordinator,LocalMarketing,Marketing,,Marketing Specialist,Marketing
+Alok Verma,alok_verma032,Uttar Pradesh,PhD,Machine Learning,10,ML Researcher,LocalResearch,IT,ML Certification,Senior ML Researcher,IT
+Mona Sharma,mona_sharma033,Delhi,Masters,Project Management,7,Project Manager,LocalProjects,Management,Project Management Certification,Senior Project Manager,Management
+Rohit Kapoor,rohit_kapoor034,Maharashtra,Bachelors,Web Development,3,Junior Web Developer,LocalWebTech,IT,,Web Developer,IT
+Reena Yadav,reena_yadav035,Karnataka,Bachelors,Software Development,5,Software Developer,LocalTech,IT,,Senior Software Developer,IT
+Aman Singh,aman_singh036,Haryana,Masters,Data Science,8,Data Scientist,LocalDataCo,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Anjali Verma,anjali_verma037,Uttar Pradesh,Bachelors,Graphic Design,2,Junior Graphic Designer,LocalDesigns,Design,,Graphic Designer,Design
+Sumit Kumar,sumit_kumar038,Bihar,Uneducated,Tailoring,12,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Shweta Patel,shweta_patel039,Maharashtra,Masters,Psychology,6,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Vivek Singh,vivek_singh040,Gujarat,Bachelors,Farming,9,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Asha Kumari,asha_kumari041,Telangana,High School Diploma,Communication Skills,4,Call Center Representative,LocalCallCenter,Customer Service,,Senior Call Center Representative,Customer Service
+Prakash Yadav,prakash_yadav042,Haryana,Bachelors,Web Development,6,Web Developer,LocalWebTech,IT,,Senior Web Developer,IT
+Anita Singh,anita_singh043,Delhi,Uneducated,Catering,10,Caterer,LocalCaterers,Hospitality,,Master Caterer,Local Business
+Rohit Verma,rohit_verma044,Rajasthan,Masters,Public Relations,7,Public Relations Specialist,LocalPRAgency,Communication,PR Certification,Senior PR Specialist,Communication
+Jyoti Devi,jyoti_devi045,Himachal Pradesh,Masters,Data Analysis,5,Data Analyst,LocalDataPro,Data Management,,Senior Data Analyst,Data Analysis
+Rajeev Kumar,rajeev_kumar046,Punjab,Bachelors,Marketing,3,Marketing Coordinator,LocalMarketing,Marketing,,Marketing Specialist,Marketing
+Geeta Devi,geeta_devi047,Uttar Pradesh,Uneducated,Cooking,8,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Harish Verma,harish_verma048,Tamil Nadu,Bachelors,Software Development,4,Software Engineer,LocalTechSolutions,IT,,Senior Software Engineer,IT
+Seema Singh,seema_singh049,Maharashtra,High School Diploma,Communication Skills,2,Call Center Representative,LocalCallCenter,Customer Service,,Senior Call Center Representative,Customer Service
+Manoj Kumar,manoj_kumar050,Bihar,Uneducated,Construction,11,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Sunita Devi,sunita_devi051,Punjab,Bachelors,Graphic Design,3,Graphic Designer,LocalDesignGenius,Design,,Senior Graphic Designer,Design
+Ajay Kumar,ajay_kumar052,Rajasthan,Uneducated,Tailoring,9,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Sarika Verma,sarika_verma053,Delhi,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Kamal Singh,kamal_singh054,Uttar Pradesh,Bachelors,Farming,10,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Sarita Devi,sarita_devi055,Punjab,High School Diploma,Communication Skills,5,Customer Support Representative,LocalServicePro,Services,,Senior Customer Support Representative,Services
+Alok Sharma,alok_sharma056,Haryana,Masters,Data Science,8,Data Scientist,LocalDataGenius,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Anu Yadav,anu_yadav057,Gujarat,Bachelors,Web Development,4,Web Developer,LocalWebTech,IT,,Senior Web Developer,IT
+Rahul Verma,rahul_verma058,Delhi,Masters,Project Management,6,Project Manager,LocalXYZLtd,Management,Project Management Certification,Senior Project Manager,Management
+Sakshi Kapoor,sakshi_kapoor059,Maharashtra,Bachelors,Software Development,3,Junior Software Engineer,LocalTechSolutions,IT,,Software Engineer,IT
+Santosh Kumar,santosh_kumar060,Tamil Nadu,Bachelors,Electrical Work,5,Electrician,LocalServices,Construction,,Master Electrician,Local Business
+Ritu Sharma,ritu_sharma061,Haryana,Masters,Environmental Science,6,Environmental Consultant,LocalConsultancy,Environment,Environmental Certification,Senior Environmental Consultant,Environment
+Amita Devi,amita_devi062,Rajasthan,Bachelors,Construction,8,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Rahul Yadav,rahul_yadav063,West Bengal,Uneducated,Painting,15,Painter,LocalArtists,Art,,Master Painter,Local Business
+Neha Kumari,neha_kumari064,Madhya Pradesh,Masters,Psychiatry,7,Psychiatrist,LocalClinic,Healthcare,Psychiatry Certification,Senior Psychiatrist,Healthcare
+Rahul Kumar,rahul_kumar065,Haryana,Bachelors,Plumbing,9,Plumber,LocalServices,Construction,,Master Plumber,Local Business
+Preeti Verma,preeti_verma066,Delhi,Uneducated,Cooking,12,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Rahul Sharma,rahul_sharma067,Maharashtra,Bachelors,Marketing,5,Marketing Coordinator,LocalMarketing,Marketing,,Marketing Specialist,Marketing
+Anjali Yadav,anjali_yadav068,Karnataka,PhD,Machine Learning,8,ML Researcher,LocalResearch,IT,ML Certification,Senior ML Researcher,IT
+Vikas Kumar,vikas_kumar069,Uttar Pradesh,Masters,Data Science,7,Data Scientist,LocalDataCo,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Sarika Kumari,sarika_kumari070,Haryana,Bachelors,Graphic Design,3,Graphic Designer,LocalDesigns,Design,,Senior Graphic Designer,Design
+Sunil Singh,sunil_singh071,Karnataka,Uneducated,Cooking,8,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Rekha Devi,rekha_devi072,West Bengal,Masters,Psychology,6,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Rajiv Yadav,rajiv_yadav073,Bihar,Bachelors,Farming,11,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Anita Kumari,anita_kumari074,Maharashtra,High School Diploma,Communication Skills,4,Call Center Representative,LocalCallCenter,Customer Service,,Senior Call Center Representative,Customer Service
+Ajay Sharma,ajay_sharma075,Himachal Pradesh,Bachelors,Web Development,5,Web Developer,LocalWebTech,IT,,Senior Web Developer,IT
+Meenakshi Sharma,meenakshi_sharma076,Karnataka,Bachelors,Software Development,3,Software Engineer,LocalTechSolutions,IT,,Senior Software Engineer,IT
+Suresh Yadav,suresh_yadav039,Uttar Pradesh,Bachelors,Farming,14,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Ananya Verma,ananya_verma040,Maharashtra,Bachelors,Software Development,5,Software Developer,TechInnovate,IT,,Senior Software Developer,IT
+Rajesh Kumar,rajesh_kumar041,Tamil Nadu,Masters,Data Science,7,Data Scientist,DataTech,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Aarti Sharma,aarti_sharma042,Rajasthan,Bachelors,Graphic Design,4,Graphic Designer,DesignCraft,Design,,Senior Graphic Designer,Design
+Vikas Verma,vikas_verma043,Karnataka,Masters,Project Management,9,Project Manager,ABC Projects,Management,Project Management Certification,Senior Project Manager,Management
+Preeti Singh,preeti_singh044,Madhya Pradesh,Uneducated,Construction,12,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Avinash Yadav,avinash_yadav045,Haryana,Bachelors,Marketing,6,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Aisha Kapoor,aisha_kapoor046,Punjab,High School Diploma,Communication Skills,3,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Anand Singh,anand_singh047,Telangana,PhD,Machine Learning,8,ML Engineer,TechInnovate,IT,ML Certification,Senior ML Engineer,IT
+Nisha Verma,nisha_verma048,Gujarat,Masters,Interior Design,5,Interior Designer,InteriorCraft,Design,Interior Design Certification,Senior Interior Designer,Design
+Ravi Sharma,ravi_sharma049,Delhi,Bachelors,Web Development,4,Web Developer,WebSolutions,IT,,Senior Web Developer,IT
+Kirti Yadav,kirti_yadav050,Maharashtra,Uneducated,Tailoring,11,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Nitin Kumar,nitin_kumar051,Uttar Pradesh,Masters,Data Analysis,6,Data Analyst,DataInsights,Data Management,,Senior Data Analyst,Data Analysis
+Sunita Devi,sunita_devi052,West Bengal,High School Diploma,Communication Skills,3,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Rajat Sharma,rajat_sharma053,Punjab,Bachelors,Teaching,9,School Teacher,LocalSchool,Education,Teaching Certification,Senior School Teacher,Education
+Anju Yadav,anju_yadav054,Bihar,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Alok Verma,alok_verma055,Uttar Pradesh,Uneducated,Catering,14,Caterer,LocalCaterers,Hospitality,,Master Caterer,Local Business
+Anisha Singh,anisha_singh056,Tamil Nadu,Bachelors,Event Planning,5,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+Arjun Kumar,arjun_kumar057,Rajasthan,Uneducated,Farming,10,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Sadhna Devi,sadhna_devi058,Delhi,Masters,Public Relations,8,PR Specialist,LocalPRAgency,Communication,PR Certification,Senior PR Specialist,Communication
+Vijay Sharma,vijay_sharma059,Gujarat,Bachelors,Software Development,3,Software Engineer,TechSolutions,IT,,Junior Software Engineer,IT
+Komal Verma,komal_verma060,Karnataka,Masters,Data Science,7,Data Scientist,DataTech,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Pradeep Yadav,pradeep_yadav061,Haryana,Bachelors,Marketing,5,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Ritu Kapoor,ritu_kapoor062,Maharashtra,High School Diploma,Communication Skills,2,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Mohan Singh,mohan_singh063,Telangana,PhD,Machine Learning,8,ML Engineer,TechInnovate,IT,ML Certification,Senior ML Engineer,IT
+Divya Verma,divya_verma064,Delhi,Masters,Project Management,9,Project Manager,ABC Projects,Management,Project Management Certification,Senior Project Manager,Management
+Rajeev Yadav,rajeev_yadav065,Punjab,Uneducated,Tailoring,12,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Sangeeta Sharma,sangeeta_sharma066,Gujarat,Masters,Data Analysis,6,Data Analyst,DataInsights,Data Management,,Senior Data Analyst,Data Analysis
+Ashish Kumar,ashish_kumar067,Karnataka,Bachelors,Graphic Design,4,Graphic Designer,DesignCraft,Design,,Senior Graphic Designer,Design
+Jyoti Devi,jyoti_devi068,Madhya Pradesh,Uneducated,Construction,11,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Pawan Yadav,pawan_yadav069,Uttar Pradesh,Bachelors,Marketing,6,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Amit Kumar,amit_kumar070,Punjab,High School Diploma,Communication Skills,2,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Ankita Sharma,ankita_sharma071,West Bengal,PhD,Machine Learning,8,ML Engineer,TechInnovate,IT,ML Certification,Senior ML Engineer,IT
+Rahul Verma,rahul_verma072,Tamil Nadu,Bachelors,Software Development,4,Software Engineer,TechSolutions,IT,,Senior Software Engineer,IT
+Priyanka Yadav,priyanka_yadav073,Maharashtra,Uneducated,Tailoring,10,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Vishal Kumar,vishal_kumar074,Karnataka,Masters,Data Science,7,Data Scientist,DataTech,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Riya Verma,riya_verma075,Delhi,Masters,Project Management,9,Project Manager,ABC Projects,Management,Project Management Certification,Senior Project Manager,Management
+Sanjay Sharma,sanjay_sharma076,Madhya Pradesh,Bachelors,Marketing,5,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Kavita Yadav,kavita_yadav077,Rajasthan,High School Diploma,Communication Skills,3,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Ravi Kumar,ravi_kumar078,Uttar Pradesh,PhD,Machine Learning,8,ML Engineer,TechInnovate,IT,ML Certification,Senior ML Engineer,IT
+Nidhi Verma,nidhi_verma079,Gujarat,Masters,Interior Design,5,Interior Designer,InteriorCraft,Design,Interior Design Certification,Senior Interior Designer,Design
+Anil Singh,anil_singh080,Karnataka,Bachelors,Web Development,4,Web Developer,WebSolutions,IT,,Senior Web Developer,IT
+Pooja Yadav,pooja_yadav081,Maharashtra,Uneducated,Tailoring,11,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Rajat Sharma,rajat_sharma082,Uttar Pradesh,Masters,Data Analysis,6,Data Analyst,DataInsights,Data Management,,Senior Data Analyst,Data Analysis
+Ritu Verma,ritu_verma083,West Bengal,High School Diploma,Communication Skills,3,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Alok Yadav,alok_yadav084,Karnataka,Bachelors,Teaching,9,School Teacher,LocalSchool,Education,Teaching Certification,Senior School Teacher,Education
+Sunita Devi,sunita_devi085,Rajasthan,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Ankit Sharma,ankit_sharma086,Uttar Pradesh,Uneducated,Catering,14,Caterer,LocalCaterers,Hospitality,,Master Caterer,Local Business
+Mona Singh,mona_singh087,Tamil Nadu,Bachelors,Event Planning,5,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+Arjun Kumar,arjun_kumar088,Rajasthan,Uneducated,Farming,10,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Sadhna Devi,sadhna_devi089,Delhi,Masters,Public Relations,8,PR Specialist,LocalPRAgency,Communication,PR Certification,Senior PR Specialist,Communication
+Vijay Sharma,vijay_sharma090,Gujarat,Bachelors,Software Development,3,Software Engineer,TechSolutions,IT,,Junior Software Engineer,IT
+Komal Verma,komal_verma091,Karnataka,Masters,Data Science,7,Data Scientist,DataTech,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Pradeep Yadav,pradeep_yadav092,Haryana,Bachelors,Marketing,5,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Ritu Kapoor,ritu_kapoor093,Maharashtra,High School Diploma,Communication Skills,2,Customer Support Representative,ServiceHub,Services,,Senior Customer Support Representative,Services
+Mohan Singh,mohan_singh094,Telangana,PhD,Machine Learning,8,ML Engineer,TechInnovate,IT,ML Certification,Senior ML Engineer,IT
+Divya Verma,divya_verma095,Delhi,Masters,Project Management,9,Project Manager,ABC Projects,Management,Project Management Certification,Senior Project Manager,Management
+Rajeev Yadav,rajeev_yadav096,Punjab,Uneducated,Tailoring,12,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Sangeeta Sharma,sangeeta_sharma097,Gujarat,Masters,Data Analysis,6,Data Analyst,DataInsights,Data Management,,Senior Data Analyst,Data Analysis
+Ashish Kumar,ashish_kumar098,Karnataka,Bachelors,Graphic Design,4,Graphic Designer,DesignCraft,Design,,Senior Graphic Designer,Design
+Jyoti Devi,jyoti_devi099,Madhya Pradesh,Uneducated,Construction,11,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Pawan Yadav,pawan_yadav100,Uttar Pradesh,Bachelors,Marketing,6,Marketing Executive,LocalMarketingHub,Marketing,,Senior Marketing Executive,Marketing
+Neha Verma,neha_verma101,Maharashtra,Uneducated,Tailoring,9,Tailor,LocalTailors,Artisan,,Master Tailor,Local Business
+Vishal Kumar,vishal_kumar102,Karnataka,Masters,Data Science,8,Data Scientist,DataTech,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Ankita Yadav,ankita_yadav103,Punjab,Bachelors,Software Development,3,Software Engineer,TechSolutions,IT,,Junior Software Engineer,IT
+Amit Verma,amit_verma104,Delhi,Uneducated,Cooking,15,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Vikas Kumar,vikas_kumar105,Maharashtra,PhD,Environmental Science,10,Environmental Scientist,GreenEarth,Environmental Science,Environmental Science Certification,Senior Environmental Scientist,Environment
+Rajni Devi,rajni_devi106,Uttar Pradesh,Bachelors,Event Planning,6,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+ਰਾਜਦੀਪ ਸਿੰਘ,rajdeep_singh001,Punjab,Bachelors,Software Development,4,Software Engineer,TechSolutions,IT,,Senior Software Engineer,IT
+ਕੁਲਵੰਤ ਕੌਰ,kulwant_kaur002,Punjab,Masters,Data Analysis,3,Data Analyst,DataPro,Data Management,,Senior Data Analyst,Data Analysis
+ਹਰਪਰੀਤ ਸਿੰਘ,harpreet_singh003,Punjab,Bachelors,Marketing,5,Marketing Specialist,MarketingHub,Marketing,Digital Marketing Certification,Marketing Manager,Marketing
+ਸੁਨੈਨਾ ਪਟੇਲ,sunaina_patel004,Punjab,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+ਰਜਵਿੰਦਰ ਵਰਮਾ,rajinder_varma005,Punjab,PhD,Machine Learning,6,Machine Learning Engineer,AIInnovate,IT,ML Certification,Senior ML Engineer,IT
+ਸਨੇਹਾ ਕਪੂਰ,sneha_kapoor006,Punjab,Masters,Project Management,8,Project Manager,XYZ Ltd,Management,Project Management Certification,Senior Project Manager,Management
+ਅਰਜੁਨ ਸ਼ਰਮਾ,arjun_sharma007,Punjab,Bachelors,Web Development,4,Web Developer,WebTech,IT,,Senior Web Developer,IT
+ਮੀਰਾ ਜੈਨ,meera_jain008,Punjab,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+ਵਿਕਰਮ ਸਿੰਘ,vikram_singh009,Punjab,Masters,Data Science,7,Data Scientist,DataGenius,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+ਪੂਜਾ ਗੁਪਤਾ,pooja_gupta010,Punjab,Bachelors,Graphic Design,3,Graphic Designer,DesignGenius,Design,,Senior Graphic Designer,Design
+ਦੀਪਕ ਯਾਦਵ,deepak_yadav011,Punjab,Uneducated,Tailoring,10,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+ਅਨੀਤਾ ਮਿਸ਼ਰਾ,anita_mishra012,Punjab,Bachelors,Teaching,8,School Teacher,LocalSchool,Education,Teaching Certification,Senior School Teacher,Education
+ਰਾਜਿੰਦਰ ਕੁਮਾਰ,rajinder_kumar013,Punjab,PhD,Environmental Science,12,Environmental Scientist,GreenEarth,Environmental Science,Environmental Science Certification,Senior Environmental Scientist,Environment
+ਸੁਮਨ ਸਿੰਘ,suman_singh014,Punjab,Uneducated,Event Planning,5,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+ਅਨੀਲ ਯਾਦਵ,anil_yadav015,Punjab,Bachelors,Farming,15,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+ਰਾਣੀ ਵਰਮਾ,rani_varma016,Punjab,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+ਕਵਿਤਾ ਸ਼ਰਮਾ,kavita_sharma017,Punjab,Bachelors,Cooking,12,Chef,LocalRestaurant,Culinary,,Head Chef,Hospitality
+ਸੰਜੇਵ ਕੁਮਾਰ,sanjeev_kumar018,Punjab,Uneducated,Social Work,10,Social Worker,LocalNGO,Social Services,Social Work Certification,Senior Social Worker,Social Services
+Rajesh Gupta,rajesh_gupta001,Haryana,Bachelors,Software Development,4,Software Engineer,TechSolutions,IT,,Senior Software Engineer,IT
+Priya Sharma,priya_sharma002,Delhi,Masters,Data Analysis,3,Data Analyst,DataPro,Data Management,,Senior Data Analyst,Data Analysis
+Rahul Verma,rahul_verma003,Punjab,Bachelors,Marketing,5,Marketing Specialist,MarketingHub,Marketing,Digital Marketing Certification,Marketing Manager,Marketing
+Neha Yadav,neha_yadav004,Uttar Pradesh,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Rajeev Singh,rajeev_singh005,Haryana,PhD,Machine Learning,6,Machine Learning Engineer,AIInnovate,IT,ML Certification,Senior ML Engineer,IT
+Sneha Kapoor,sneha_kapoor006,Delhi,Masters,Project Management,8,Project Manager,XYZ Ltd,Management,Project Management Certification,Senior Project Manager,Management
+Arjun Sharma,arjun_sharma007,Haryana,Bachelors,Web Development,4,Web Developer,WebTech,IT,,Senior Web Developer,IT
+Meera Jain,meera_jain008,Delhi,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Vikram Singh,vikram_singh009,Haryana,Masters,Data Science,7,Data Scientist,DataGenius,Data Science,Data Science Certification,Senior Data Scientist,Data Science
+Pooja Gupta,pooja_gupta010,Uttar Pradesh,Bachelors,Graphic Design,3,Graphic Designer,DesignGenius,Design,,Senior Graphic Designer,Design
+Deepak Yadav,deepak_yadav011,Haryana,Uneducated,Tailoring,10,Master Tailor,LocalTailors,Artisan,,Tailoring Expert,Local Business
+Anita Mishra,anita_mishra012,Uttar Pradesh,Bachelors,Teaching,8,School Teacher,LocalSchool,Education,Teaching Certification,Senior School Teacher,Education
+Rajendra Kumar,rajendra_kumar013,Uttar Pradesh,PhD,Environmental Science,12,Environmental Scientist,GreenEarth,Environmental Science,Environmental Science Certification,Senior Environmental Scientist,Environment
+Suman Singh,suman_singh014,Uttar Pradesh,Uneducated,Event Planning,5,Event Planner,LocalEvents,Event Management,Event Planning Certification,Senior Event Planner,Event Management
+Anil Yadav,anil_yadav015,Uttar Pradesh,Bachelors,Farming,15,Farmer,LocalFarm,Agriculture,,Senior Farmer,Agriculture
+Rani Verma,rani_verma016,Delhi,Masters,Psychology,7,Psychologist,LocalClinic,Healthcare,Psychology Certification,Senior Psychologist,Healthcare
+Kavita Sharma,kavita_sharma017,Haryana,Bachelors,Cooking,12,Chef,LocalRestaurant,Culinary,,Head Chef,Hospitality
+Sanjay Kumar,sanjay_kumar018,Delhi,Uneducated,Social Work,10,Social Worker,LocalNGO,Social Services,Social Work Certification,Senior Social Worker,Social Services
+Sonali Gupta,sonali_gupta019,Uttar Pradesh,Masters,Interior Design,6,Interior Designer,LocalDesign,Design,Interior Design Certification,Senior Interior Designer,Design
+Rajeev Singh,rajeev_singh020,Haryana,Bachelors,Construction,8,Construction Worker,LocalConstruction,Construction,,Construction Supervisor,Construction
+Manish Verma,manish_verma021,Uttar Pradesh,Uneducated,Painting,14,Painter,LocalArtists,Art,,Master Painter,Local Business
+Asha Devi,asha_devi022,Haryana,Masters,Psychiatry,9,Psychiatrist,LocalClinic,Healthcare,Psychiatry Certification,Senior Psychiatrist,Healthcare
+Gaurav Kapoor,gaurav_kapoor023,Haryana,Bachelors,Plumbing,11,Plumber,LocalServices,Construction,,Master Plumber,Local Business
+Nisha Sharma,nisha_sharma024,Delhi,High School Diploma,Communication Skills,3,Call Center Representative,LocalCallCenter,Customer Service,,Senior Call Center Representative,Customer Service
+Ajay Yadav,ajay_yadav025,Uttar Pradesh,Bachelors,Electrical Work,7,Electrician,LocalServices,Construction,,Master Electrician,Local Business
+Sangeeta Verma,sangeeta_verma026,Haryana,Uneducated,Catering,13,Caterer,LocalCaterers,Hospitality,,Master Caterer,Local Business
+Rajat Singh,rajat_singh027,Haryana,Masters,Public Relations,8,Public Relations Specialist,LocalPRAgency,Communication,PR Certification,Senior PR Specialist,Communication
+Meenakshi Kumari,meenakshi_kumari028,Uttar Pradesh,Bachelors,Tailoring,5,Tailor,LocalTailors,Artisan,,Master Tailor,Local Business
+Kiran Devi,kiran_devi029,Haryana,Uneducated,Cooking,9,Cook,LocalRestaurant,Culinary,,Head Cook,Hospitality
+Ravi Yadav,ravi_yadav030,Haryana,Masters,Environmental Science,6,Environmental Consultant,LocalConsultancy,Environment,Environmental Certification,Senior Environmental Consultant,Environment
+Manoj Sharma,manoj_sharma031,Haryana,Bachelors,Software Development,4,Software Engineer,TechSolutions,IT,,Senior Software Engineer,IT
+Ritu Verma,ritu_verma032,Uttar Pradesh,High School Diploma,Communication Skills,2,Customer Support Representative,ServicePro,Services,,Senior Customer Support Representative,Services
+Alok Singh,alok_singh033,Haryana,Bachelors,Marketing,5,Marketing Specialist,MarketingHub,Marketing,Digital Marketing Certification,Marketing Manager,Marketing
+Juhi Patel,juhi_patel034,Uttar Pradesh,Masters,Data Analysis,3,Data Analyst,DataPro,Data Management,,Senior Data Analyst,Data Analysis
+Mukesh Kumar,mukesh_kumar035,Uttar Pradesh,PhD,Machine Learning,6,Machine Learning Engineer,AIInnovate,IT,ML Certification,Senior ML Engineer,IT

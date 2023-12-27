@@ -1,0 +1,74 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Dashboard </title>
+      <link rel="stylesheet" href="/static/css/Home.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LHCGLN2DT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LHCGLN2DT');
+</script>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#" class="logo">
+              <img src="https://play-lh.googleusercontent.com/l7uw4DJ65-q_G9RBp3e5XPDAuRz5x6jP3hqUSpdUr-ZM2qpyoQdDBT1U6qztnxchhw" alt="">
+              <span class="nav-item">DashBoard</span>
+            </a></li>
+            <li><a href="{{url_for('dashboard')}}">
+                <span class="nav-item">Analytics</span>
+              </a></li>
+              <li><a href="{{url_for('custom_data')}}">
+                <span class="nav-item">Custom Datagraph</span>
+              </a></li>
+  
+              <li><a href="">
+                <span class="nav-item">Notifications</span>
+              </a></li>
+              <li><a href="{{url_for('user_feed')}}">
+                <span class="nav-item">User Feedbacks</span>
+              </a></li>
+              <li><a href="{{url_for('user_alerts')}}">
+                <span class="nav-item">Recruiter recommendation</span>
+              </a></li>
+              <li><a href="{{url_for('todo')}}">
+                <span class="nav-item">To do</span>
+              </a></li>
+              <li><a href="{{url_for('system_update')}}">
+                <span class="nav-item">Traffic</span>
+              </a></li>
+              <li><a href="">
+                <span class="nav-item">Profile</span>
+              </a></li>
+              <li><a href="">
+                <span class="nav-item">Help</span>
+              </a></li>
+              <li><a href="{{url_for('logout')}}" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+              </a></li>
+          </ul>
+        </nav>
+    
+        <section class="main">
+            <center>
+                <iframe
+                  src="https://app.databox.com/datawall/bb971e1865ccadac744ff04903e3fc1b5e785386582c91b"
+                  width="90%"
+                  height="90%"
+                  frameborder="0"
+                > 
+                </iframe>
+            </center>
+        </section>
+      </div>
+    </body>
+    </html></span>

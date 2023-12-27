@@ -290,8 +290,8 @@
             <tr><td><a>Hall Ticket</a></td></tr>
             <tr><td><a href="{{url_for('job_post')}}">Jobs</a></td></tr>
             <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
-            <tr><td><a>Search Councellor</a></td></tr>
-            <tr><td><a>Apply Skill Development Courses</a></td></tr>
+            <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestion</a></td></tr>
+            <tr><td><a href="{{url_for('career_path')}}">Career Path</a></td></tr>
             <tr><td><a href="{{url_for('feedback')}}">Feedback</a></td></tr>
             <tr><td><a>Self Employment</a></td></tr>
             <tr><td><a>Discussion Forum</a></td></tr>
@@ -302,19 +302,19 @@
     <div id="panel" class="panel-container">
         <strong style="color: black;">How satisfied are you with our <br /> PGRKAM website?</strong>
         <div class="ratings-container" >
-            <div class="rating" onclick="selectEmoji('sad')" data-emoji="sad">
+            <div class="rating" onclick="selectEmoji('Sad')" data-emoji="Sad">
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/sad-icon.svg"
                     alt="">
                 <small>Unhappy</small>
             </div>
 
-            <div class="rating" onclick="selectEmoji('neutral')" data-emoji="neutral">
+            <div class="rating" onclick="selectEmoji('Neutral')" data-emoji="Neutral">
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smiley-icon.svg"
                     alt="" />
                 <small>Neutral</small>
             </div>
 
-            <div class="rating" onclick="selectEmoji('satisfied')" data-emoji="satisfied">
+            <div class="rating" onclick="selectEmoji('Happy')" data-emoji="Happy">
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/laugh-icon.svg"
                     alt="" />
                 <small>Satisfied</small>

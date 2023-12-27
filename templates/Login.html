@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/static/css/Login.css"/>
+</style>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LHCGLN2DT"></script>
@@ -22,7 +30,7 @@
         </div>
         <br>
         <br>
-        <form class="p-3 mt-3" action="/" method="POST">
+        <form class="p-3 mt-3" action="/admin" method="POST">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
                 <input type="text" name="userName" id="userName" placeholder="Username">
@@ -41,5 +49,15 @@
         </div>
     </center>
     </div>
+    <script>
+        // Function to apply translation to the entire page
+        function translatePage(languageCode) {
+          var translateInstance = new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+          translateInstance.getPageLanguage = function () { return languageCode; };
+        }
+    
+        // Example: Translate the page to French when the page loads
+        translatePage('fr');
+      </script>
 </body>
 </html>

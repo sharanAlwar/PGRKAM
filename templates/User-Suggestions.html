@@ -1,10 +1,9 @@
-<!-- templates/job_listings.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Listings</title>
+    <title>Ministries Data</title>
     <!-- icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- google fonts -->
@@ -32,7 +31,7 @@
             background: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(37, 86%, 75%, 1) 100%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F6CB87", GradientType=1 );
             font-family: 'Open Sans', sans-serif;
-            width: 100%;
+            width: 108%;
             height: 120px;
             display: flex;
             flex-direction: row;
@@ -106,6 +105,7 @@
             margin: 20px;
             display: flex;
             flex-direction: column;
+            padding-left: 30px;
         }
         .right-content{
             flex: 4;
@@ -113,7 +113,6 @@
             border-width: 1px;
             border-style: solid;
             margin: 20px;
-            padding: 25px;
         }
         /* LEFT CONTENT CSS */
         .left-content table{
@@ -241,8 +240,8 @@
       }
     </script>
 </head>
+
 <body>
-    
     <!-- HEADER -->
     <div class="header">
         <div class="left">
@@ -274,31 +273,112 @@
                 <tr><td><a>Hall Ticket</a></td></tr>
                 <tr><td><a href="{{url_for('job_post')}}">Jobs</a></td></tr>
                 <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
-                <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestion</a></td></tr>
+                <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestions</a></td></tr>
                 <tr><td><a href="{{url_for('career_path')}}">Career Path</a></td></tr>
                 <tr><td><a href="{{url_for('feedback')}}">Feedback</a></td></tr>
                 <tr><td><a>Self Employment</a></td></tr>
                 <tr><td><a>Discussion Forum</a></td></tr>
             </table>
         </div>
-        <div class="right-content">
-            <h1>Job Listings</h1>
+        <div class="right-content">   
+            <h1>Job Suggestions</h1>
+    <table>
+        <tr>
+            <th>Role</th>
+            <th>Company</th>
+            <th>Place of Posting</th>
+            <th>Qualification</th>
+            <th>Salary</th>
+            <th>Vacancies</th>
+            <th>Minimum Age</th>
+            <th>Gender</th>
+            <th>Job Location</th>
+            <th>Apply</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+                <td>{{ row[9] }}</td>
+                <td>{{ row[10] }}</td>
+                <td><button class="apply-button">Apply</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <style>
+              /* Reset default styles for the page */
+body, h1, h2, h3, p, table {
+    margin: 0;
+    padding: 0;
+}
 
-    {% for job in job_listings_data %}
-        <div>
-            <h2>{{ job.title }}</h2>
-            <p>{{ job.description }}</p>
-            <form method="post" action="{{ url_for('submit_resume', job_title=job['title']) }}" enctype="multipart/form-data">
-                <label for="file">Select Resume (PDF only):</label>
-                <input type="file" name="file" id="file" accept=".pdf" required>
-                <button type="submit">Submit Resume</button>
-            </form>
-        </div>
-    {% endfor %}
+/* Set a background color for the whole page */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
 
-    {% if error %}
-        <p>{{ error }}</p>
-    {% endif %}
+/* Style the container holding the table */
+.right-content {
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style the table header */
+th {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Style the table cells */
+td {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+}
+
+/* Style the Apply button */
+.apply-button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.apply-button:hover {
+    background-color: #d35400;
+}
+
+    </style>
         </div>
     </div>
     <script>
@@ -312,5 +392,4 @@
         translatePage('fr');
       </script>
 </body>
-
 </html>

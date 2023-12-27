@@ -146,6 +146,13 @@
         }
     </style>
     <title>Document</title>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LHCGLN2DT"></script>
@@ -189,15 +196,48 @@
         <div class="formCont">
             <h2>Login</h2>
             <hr>
-            <form method="POST" action="/user-login">
+            <form method="POST" action="/">
                 <p>Please enter name:</p>
                 <input type="text" name="username" />
                 <p>Please enter password:</p>
                 <input type="password" name="password"/>
                 <input type="submit" value="Login" class="submit"/>
             </form><br>
+            {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="color: red;">
+                {% for message in messages %}
+                    {{ message }}<br>
+                {% endfor %}
+                <br>
+            </div>
+        {% endif %}
+    {% endwith %}
+    
             <p>New user ? Then <a href="{{url_for('user_register')}}">register here</a></p>
         </div>
     </div>
+    <script>
+        fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => {
+            // Log the client's public IP address
+            console.log('Your public IP address is:', data.ip);
+          })
+          .catch(error => {
+            console.error('Error fetching IP address:', error);
+          });
+        </script>
+
+<script>
+    // Function to apply translation to the entire page
+    function translatePage(languageCode) {
+      var translateInstance = new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      translateInstance.getPageLanguage = function () { return languageCode; };
+    }
+
+    // Example: Translate the page to French when the page loads
+    translatePage('fr');
+  </script>
 </body>
 </html>

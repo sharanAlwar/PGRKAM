@@ -1,10 +1,9 @@
-<!-- templates/job_listings.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Listings</title>
+    <title>Ministries Data</title>
     <!-- icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- google fonts -->
@@ -113,7 +112,6 @@
             border-width: 1px;
             border-style: solid;
             margin: 20px;
-            padding: 25px;
         }
         /* LEFT CONTENT CSS */
         .left-content table{
@@ -233,16 +231,8 @@
         color: black;   
     }
     </style>
-    <div id="google_translate_element"></div>
-  
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-      }
-    </script>
 </head>
 <body>
-    
     <!-- HEADER -->
     <div class="header">
         <div class="left">
@@ -274,43 +264,92 @@
                 <tr><td><a>Hall Ticket</a></td></tr>
                 <tr><td><a href="{{url_for('job_post')}}">Jobs</a></td></tr>
                 <tr><td><a href="{{url_for('job_listings')}}">Search More Jobs</a></td></tr>
-                <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestion</a></td></tr>
+                <tr><td><a href="{{url_for('job_suggest')}}">Job Suggestions</a></td></tr>
                 <tr><td><a href="{{url_for('career_path')}}">Career Path</a></td></tr>
                 <tr><td><a href="{{url_for('feedback')}}">Feedback</a></td></tr>
                 <tr><td><a>Self Employment</a></td></tr>
                 <tr><td><a>Discussion Forum</a></td></tr>
             </table>
         </div>
-        <div class="right-content">
-            <h1>Job Listings</h1>
-
-    {% for job in job_listings_data %}
-        <div>
-            <h2>{{ job.title }}</h2>
-            <p>{{ job.description }}</p>
-            <form method="post" action="{{ url_for('submit_resume', job_title=job['title']) }}" enctype="multipart/form-data">
-                <label for="file">Select Resume (PDF only):</label>
-                <input type="file" name="file" id="file" accept=".pdf" required>
-                <button type="submit">Submit Resume</button>
+        <div class="right-content">   
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+        
+                h2 {
+                    text-align: center;
+                }s
+        
+                form {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+        
+                label {
+                    display: block;
+                    margin-top: 10px;
+                }
+        
+                input, select {
+                    width: 100%;
+                    padding: 8px;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                }
+        
+                button {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                }
+            </style>
+            <h2>Career Path predictor</h2>
+            <h1>Predicted Career: {{job_role}}</h1>
+            <form action="/career-path" method="post">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+        
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" name="qualification" required>
+        
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" required>
+        
+                <label for="experience">Experience:</label>
+                <input type="text" id="experience" name="experience" required>
+        
+                <label for="job_title">Job Title:</label>
+                <input type="text" id="job_title" name="job_title" required>
+        
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" required>
+        
+                <label for="industry">Industry:</label>
+                <input type="text" id="industry" name="industry" required>
+        
+                <label for="certifications">Certifications:</label>
+                <input type="text" id="certifications" name="certifications" >
+        
+                <label for="desired_industry">Desired Industry:</label>
+                <input type="text" id="desired_industry" name="desired_industry" required>
+        
+                <button type="submit">Submit Application</button>
             </form>
-        </div>
-    {% endfor %}
 
-    {% if error %}
-        <p>{{ error }}</p>
-    {% endif %}
+            
         </div>
     </div>
-    <script>
-        // Function to apply translation to the entire page
-        function translatePage(languageCode) {
-          var translateInstance = new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-          translateInstance.getPageLanguage = function () { return languageCode; };
-        }
-    
-        // Example: Translate the page to French when the page loads
-        translatePage('fr');
-      </script>
-</body>
 
+</body>
 </html>
