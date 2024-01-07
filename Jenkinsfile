@@ -21,12 +21,9 @@ pipeline {
         
         stage('SSH Remote Command') {
             steps {
-                script {
-                    echo "hello world"
-                    // Define the credentials ID for SSH
-                    def SSH_CREDENTIALS = credentials('big-docker-server')
-                    // Use the SSH key to execute commands on the remote server
-                    withCredentials([sshUserPrivateKey(credentialsId: SSH_CREDENTIALS, keyFileVariable: 'SSH_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'big-docker-server', keyFileVariable: 'SSH_KEY')]) {
+                    script {
+                        echo "hello world"
                         sh "ssh -i $SSH_KEY ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
                     }
                 }
