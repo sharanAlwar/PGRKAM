@@ -26,8 +26,8 @@ pipeline {
                     // Define the credentials ID for SSH
                     def SSH_CREDENTIALS = credentials('big-docker-server')
                     // Use the SSH key to execute commands on the remote server
-                    sshagent(credentials: [SSH_CREDENTIALS]) {
-                        sh "ssh ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
+                    withCredentials([sshUserPrivateKey(credentialsId: SSH_CREDENTIALS, keyFileVariable: 'SSH_KEY')]) {
+                        sh "ssh -i $SSH_KEY ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
                     }
                 }
             }
