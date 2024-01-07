@@ -6,12 +6,6 @@ COPY . .
 
 RUN pip install --upgrade pip
 
-RUN pip install nltk
-
-RUN pip install scikit_learn
-
-RUN pip install pandas
-
 RUN pip install -r requirements.txt
 
 RUN pip install PyMuPDF
