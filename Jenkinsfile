@@ -25,12 +25,12 @@ pipeline {
 
                 // SSH2Easy: Execute multiple SSH Commands
                 ssh2Easy([sshServer: [
-                    sshCredential: 'your-ssh-credentials', // Replace with your SSH credential ID
-                    sshHost: 'your_remote_host', // Replace with your remote host
-                    sshPort: '22', // Replace with your SSH port if different
-                    sshUser: 'your_ssh_username', // Replace with your SSH username
+                    sshCredential: 'big-docker-server~~ubuntu~~18.207.144.22',
+                    sshHost: 'ubuntu@ip-172-31-27-160',
+                    sshPort: '22',
+                    sshUser: 'ubuntu',
                     sshCommand: '''
-                        echo "hello"
+                        echo "hello" >> hello.txt
                     '''
                 ]])
             }
