@@ -6,12 +6,16 @@ COPY . .
 
 RUN pip install --upgrade pip
 
+RUN pip install nltk
+
+RUN pip install scikit_learn
+
+RUN pip install pandas
+
 RUN pip install -r requirements.txt
 
 RUN pip install PyMuPDF
 
 RUN pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
-EXPOSE 8080
-
-CMD [ "python3", "main.py"]
+CMD gunicorn --bind 0.0.0.0:5000 wsgi:app
