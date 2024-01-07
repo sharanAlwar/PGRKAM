@@ -21,10 +21,10 @@ pipeline {
         
         stage('SSH Remote Command') {
             steps {
-                withCredentials([sshUserPrivateKey(credentialsId: 'big-docker-server', keyFileVariable: 'SSH_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'big-docker-server')]) {
                     script {
                         echo "hello world"
-                        sh "ssh -i $SSH_KEY ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
+                        sh "ssh ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
                     }
                 }
             }
