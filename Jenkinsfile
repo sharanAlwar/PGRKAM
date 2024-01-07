@@ -21,14 +21,14 @@ pipeline {
         
         stage('SSH Remote Command') {
             steps {
-                echo "hello world"
-                environment {
+                script {
+                    echo "hello world"
                     // Define the credentials ID for SSH
-                    SSH_CREDENTIALS = credentials('big-docker-server')
-                }
-                // Use the SSH key to execute commands on the remote server
-                sshagent(credentials: [SSH_CREDENTIALS]) {
-                    sh "ssh ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
+                    def SSH_CREDENTIALS = credentials('big-docker-server')
+                    // Use the SSH key to execute commands on the remote server
+                    sshagent(credentials: [SSH_CREDENTIALS]) {
+                        sh "ssh ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
+                    }
                 }
             }
         }
