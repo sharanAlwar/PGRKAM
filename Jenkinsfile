@@ -19,6 +19,7 @@ pipeline {
         stage('Testing') {
             steps {
                 echo "This is the testing phase ${SSH_CREDENTIALS_PSW} "
+                sh "sudo apt update"
             }
         }
         
