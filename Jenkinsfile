@@ -18,12 +18,11 @@ pipeline {
 
         stage('Testing') {
             steps {
-                echo "This is the testing phase ${SSH_CREDENTIALS_PSW} "
-                apt update
-                ssh 'ubuntu@ip-172-31-27-160'
+                script {
+                    echo "This is the testing phase ${SSH_CREDENTIALS_PSW}"
+                    sshCommand remote: remoteHost, credentials: 'SSH_CREDENTIALS', command: 'ssh ubuntu@ip-172-31-27-160'
+                }
             }
         }
-        
-        
     }
 }
