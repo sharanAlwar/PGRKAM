@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "This is the testing phase ${SSH_CREDENTIALS_PSW} "
                 apt update
-                ssh ubuntu@ip-172-31-27-160
+                ssh 'ubuntu@ip-172-31-27-160'
             }
         }
         
