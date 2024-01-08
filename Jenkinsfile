@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rmdir PGRKAM"
+                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM"
             }
         }
 
