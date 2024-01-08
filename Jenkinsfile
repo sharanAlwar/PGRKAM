@@ -20,7 +20,7 @@ pipeline {
         stage('SSH Agent') {
             steps {
                 sshagent(['big-docker-server']) {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./PGRKAM/run.sh"
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 sudo ./PGRKAM/run.sh"
                 }
             }
         }
