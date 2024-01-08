@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                sh "docker-compose down"
                 sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM"
             }
         }
@@ -21,7 +20,7 @@ pipeline {
         stage('SSH Agent') {
             steps {
                 sshagent(['big-docker-server']) {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 cd PGRKAM && docker-compose up -d --build"
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./run.sh"
                 }
             }
         }
