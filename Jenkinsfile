@@ -4,6 +4,7 @@ pipeline {
         stage('Clean Workspace') {
             steps {
                 sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM"
+                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./down.sh"
             }
         }
 
@@ -17,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('SSH Agent') {
+        stage('Deploying to DockerServer') {
             steps {
                 sshagent(['big-docker-server']) {
                     sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./run.sh"
