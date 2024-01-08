@@ -16,8 +16,11 @@ pipeline {
         stage('ssh-agent') {
             steps {
                 sshagent(['big-docker-server']) {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls && git clone https://github.com/sharanAlwar/PGRKAM.git && ls && cd app && docker build -t suii ."
-
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
+                    sh "git clone https://github.com/sharanAlwar/PGRKAM.git"
+                    sh "ls"
+                    sh "cd app"
+                    sh "docker build -t "
                 }
             }
         }
