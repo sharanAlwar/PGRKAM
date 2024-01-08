@@ -1,12 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clean Workspace') {
-            steps {
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./down.sh"
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM || echo 'already removed' " 
-            }
-        }
+        
 
         stage('Checkout from Git') {
             steps {
