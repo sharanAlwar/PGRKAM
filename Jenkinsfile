@@ -20,8 +20,8 @@ pipeline {
             steps {
                 sshagent(['big-docker-server']) {
                     sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
-                    sh "docker build -t your-docker-image-name ."
-                    
+                    sh "echo 'hello world' "
+                    sh "ls"
                 }
             }
         }
