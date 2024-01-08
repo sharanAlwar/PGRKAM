@@ -18,8 +18,11 @@ pipeline {
 
         stage('Testing') {
             steps {
+                '''
                 echo "This is the testing phase ${SSH_CREDENTIALS_PSW} "
-                sh "sudo apt update"
+                apt update
+                ssh ubuntu@ip-172-31-27-160
+                '''
             }
         }
         
