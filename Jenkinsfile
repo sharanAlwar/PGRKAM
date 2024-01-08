@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
+                sh "docker-compose down"
                 sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM"
             }
         }
