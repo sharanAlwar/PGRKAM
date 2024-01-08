@@ -16,7 +16,7 @@ pipeline {
         stage('ssh-agent') {
             steps {
                 sshagent(['big-docker-server']) {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 docker-compose up --build"
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
                 }
             }
         }
