@@ -9,18 +9,19 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/sharanAlwar/PGRKAM.git'
+                // Checkout the repository into a specific directory
+                dir('.') {
+                    git branch: 'main', url: 'https://github.com/sharanAlwar/PGRKAM.git'
+                }
             }
         }
 
-        stage('ssh-agent') {
+        stage('SSH Agent') {
             steps {
                 sshagent(['big-docker-server']) {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 docker ps"
-                    sh "git clone https://github.com/sharanAlwar/PGRKAM.git"
-                    sh "ls"
-                    sh "cd app"
-                    sh "docker build -t "
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
+                    sh "docker build -t your-docker-image-name ."
+                    
                 }
             }
         }
