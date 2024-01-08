@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        SSH_CREDENTIALS = credentials('big-docker-server')
-        remoteHost = 'ubuntu@ip-172-31-27-160' // Define the remote server address
-    }
     stages {
         stage('Clean Workspace') {
             steps {
@@ -17,11 +13,10 @@ pipeline {
             }
         }
 
-        stage('Testing') {
+        stage('ssh-agent') {
             steps {
-                script {
-                    echo "This is the testing phase ${SSH_CREDENTIALS_PSW}"
-                    sshCommand remote: remoteHost, credentials: 'SSH_CREDENTIALS', command: 'docker-compose up --build'
+                sshagent(['big-docker-server']) {
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 docker-compose up --build"
                 }
             }
         }
