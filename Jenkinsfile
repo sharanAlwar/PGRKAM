@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        SSH_CREDENTIALS = credentials('big-docker-server')
+    }
     stages {
         stage('Clean Workspace') {
             steps {
@@ -20,13 +23,12 @@ pipeline {
         }
         
         stage('SSH Remote Command') {
+            echo "hello world ${SSH_CREDENTIALS_PSW} "
             steps {
-                withCredentials([sshUserPrivateKey(credentialsId: 'big-docker-server')]) {
-                    script {
-                        echo "hello world"
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
-                    }
-                }
+                echo "inside steps"
+                sh "ssh ubuntu@ip-172-31-27-160 'echo hello >> hello.txt'"
+                sh "${SSH_CREDENTIALS_PSW}"
+                sh "docker-compose up --build"
             }
         }
     }
