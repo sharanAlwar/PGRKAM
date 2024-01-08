@@ -19,6 +19,7 @@ pipeline {
                     sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
                     sh "git clone https://github.com/sharanAlwar/PGRKAM.git"
                     sh "ls"
+                    sh "docker-compose up"
                 }
             }
         }
