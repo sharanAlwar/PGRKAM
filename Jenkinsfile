@@ -11,8 +11,10 @@ pipeline {
             steps {
                 // Checkout the repository into a specific directory
                 dir('.') {
-                    git branch: 'main', url: 'https://github.com/sharanAlwar/PGRKAM.git'
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 git clone https://github.com/sharanAlwar/PGRKAM.git"
                     sh "pwd"
+                    sh "ls"
+                    sh "docker ps"
                 }
             }
         }
