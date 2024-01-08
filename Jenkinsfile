@@ -10,8 +10,9 @@ pipeline {
         stage('Checkout from Git') {
             steps {
                 // Checkout the repository into a specific directory
-                dir('/home/ubuntu/') {
+                dir('.') {
                     git branch: 'main', url: 'https://github.com/sharanAlwar/PGRKAM.git'
+                    sh "pwd"
                 }
             }
         }
