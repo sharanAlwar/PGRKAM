@@ -22,7 +22,7 @@ pipeline {
             agent any
             steps {
                 withSonarQubeEnv('testing-sonar') {
-                    sh 'mvn clean package sonar:sonar'
+                    sh 'clean package sonar:sonar'
                 }
             }
         }
