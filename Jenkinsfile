@@ -5,10 +5,13 @@ pipeline {
         
         stage('Clean Workspace') {
             steps {
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ./down.sh"
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 sudo rm PGRKAM/.scannerwork/report-task.txt"
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 sudo rm PGRKAM/.scannerwork/.sonar_lock"
-                sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 rm -rf PGRKAM " 
+                sh '''
+                        ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls
+                        ./down.sh
+                        sudo rm PGRKAM/.scannerwork/report-task.txt
+                        sudo rm PGRKAM/.scannerwork/.sonar_lock
+                        rm -rf PGRKAM
+                    '''
             }
         }
 
