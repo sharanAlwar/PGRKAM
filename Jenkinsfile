@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout from Git') {
             steps {
                 dir('.') {
-                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 git clone https://github.com/sharanAlwar/PGRKAM.git"
+                    sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 git clone https://github.com/Yukesh0409/PGRKAM.git"
                     sh "ssh -tt -o StrictHostKeyChecking=no ubuntu@18.207.144.22 ls"
                 }
             }
