@@ -18,6 +18,21 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    // Run SonarQube scanner
+                    sh '''
+                        sonar-scanner \
+                        -Dsonar.projectKey=testing-sonar \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://54.87.215.11:9000 \
+                        -Dsonar.login=sqp_26bf4ddbc9b0e86678d9eaa71da44f2410163c29
+                    '''
+                }
+            }
+        }
+        
         stage('Deploying to DockerServer') {
             steps {
                 sshagent(['big-docker-server']) {
