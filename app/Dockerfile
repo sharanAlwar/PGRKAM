@@ -18,4 +18,6 @@ RUN pip install PyMuPDF
 
 RUN pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
+EXPOSE 5000
+
 CMD gunicorn --bind 0.0.0.0:5000 wsgi:app
